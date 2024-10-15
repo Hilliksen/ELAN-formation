@@ -13,4 +13,6 @@ $rate = 0.1524;
 
 $ammountEUR = $ammountFRN * $rate;
 
-echo "100 francs in euro is $ammountEUR!";
+$result = round($ammountEUR, 3);
+
+echo "100 francs in euro is $result!";

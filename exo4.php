@@ -1,4 +1,4 @@
-<h1>Exercice 4 </h1>
+<h1>Exercice 4</h1>
 
 <p>Ecrire un algorithme permettant de savoir si une phrase est palindrome.</p>
 
@@ -6,10 +6,21 @@
 
 <?php
 
-$phrase1 = "Engage le jeu que je le gagne";
+$phrase = "Engage le jeu que je le gagne";
 
-echo "$phrase1<br>";
+ //remove all spaces
+ $phrase= str_replace(' ', '', $phrase);
 
-$phrase2 = strrev($phrase1);
+ //change case to lower
+ $phrase = strtolower($phrase);
 
-echo "$phrase2";
+ //reverse the string
+ $reverse = strrev($phrase);
+
+ if ($phrase == $reverse) {
+     echo "<p>It is Palindrome</p>";
+ } 
+ else {
+     echo "</p>Not Palindrome</p>";
+}
+// SOLUTION FOUND ON THE INTERNET 

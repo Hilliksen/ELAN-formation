@@ -14,10 +14,10 @@ while ($i <= 10) {
     $i++;
 }
 
-//DONE WITH HELP OF MICHAEL
+//DONE WITH HELP OF MICKAEL
 
 
 for ($i=1; $i < 10 ; $i++) { 
     echo $i. " x ". $table. " = ". $i * $table."<br>";
 }
-//COPIED AND PASTED THE SOLUTION MICHAEL HAS GIVEN ME!
+//COPIED AND PASTED THE SOLUTION MICKAEL HAS GIVEN ME!

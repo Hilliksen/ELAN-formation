@@ -65,7 +65,9 @@ $nbNotes = count($notes); //counts how many numbers there are
 $sumNotes = array_sum($notes); // this just counts the sum of the table so adds every element there is, and im guessing u cant do that for table with words but idk
 $average = $sumNotes / $nbNotes; // this just a calculator meaning you can also just * 
 
-echo $average; */
+echo $average;
+
+NOTES */
 
 
 $phrase = "Notre formation DL commence aujourd'hui <br>";

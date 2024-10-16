@@ -11,34 +11,11 @@ $gender = ["man", "woman"];
 
 $age = 36;
 
-/* if( (... && ...) || (... && ....)) {
-    // taxable
-} else {
-    // not taxable
-} */
-
-if($gender[0] = ($age >=20) || $gender[1] = ($age >=18 && $age <=35) ) {
-    echo "You're taxable <br>";
-}   else {
-    echo "You're not taxable";
-}
 
 
-/* if  ($gender[0] = ($age >=20)) {
-    echo "You're not taxable <br>";
-}   elseif ($gender[1] = ($age >=18 && $age <=35)) {
-    echo "You're taxable <br>";
-}   else {
-    echo "You're not taxable";
-}
-*/
+/* DONE WITH NO HELP FROM OUTSIDE SOURCES AND MY SOLUTION
 
-
-
-
-
-
-/* switch ($gender [1]) {
+switch ($gender [1]) {
     case $age >=18 && $age <=35:
         echo "If you are a woman then are taxable <br>";
         break;
@@ -59,4 +36,30 @@ switch ($gender [0]) {
         break;
 }
 
-DONE WITH NO HELP FROM OUTSIDE SOURCES AND DONE BY MYSELF! */
+*/
+
+/* if( (... && ...) || (... && ....)) {
+    // taxable
+} else {
+    // not taxable
+} MICKAELS SOLUTION*/
+
+if($gender[0] = ($age >=20) || $gender[1] = ($age >=18 && $age <=35) ) {
+    echo "You're taxable <br>";
+}   else {
+    echo "You're not taxable";
+}
+
+
+/* if  ($gender[0] = ($age >=20)) {
+    echo "You're not taxable <br>";
+}   elseif ($gender[1] = ($age >=18 && $age <=35)) {
+    echo "You're taxable <br>";
+}   else {
+    echo "You're not taxable";
+}
+*/
+
+
+
+

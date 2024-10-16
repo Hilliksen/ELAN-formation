@@ -1,16 +1,18 @@
 <h1>Exercice 2</h1>
 
-
-<p>A partir de la phrase de l’exercice 1, écrire l’instruction permettant de compter le nombre de mots
-contenus dans celle-ci</p>
+<p>A partir de la phrase de l’exercice 1, écrire l’instruction permettant de compter le nombre de mots 
+contenus dans celle-ci.</p>
 
 <h2>Resultat</h2>
 
 <?php
 
-$phrase = "A partir de la phrase de l’exercice 1, écrire l’instruction permettant de compter le nombre de mots
-contenus dans celle-ci";
+$phrase = "Notre formation DL commence aujourd'hui <br>";
 
-$nbwords = str_word_count($phrase);
+echo $phrase;
 
-echo "The phrase contains $nbwords words!";
+$words = str_word_count($phrase);
+
+echo "That phrase contains $words words!";
+
+//DONE WITH NO HELP FROM OUTSIDE SOURCES!

@@ -1,3 +1,5 @@
+<!--DONE-->
+
 <h1>Exercice 1</h1>
 
 <p>Créer une fonction permettant de convertir en majuscule et en rouge un texte passé en argument</p>

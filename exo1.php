@@ -8,6 +8,17 @@ Ecrire un algorithme permettant de compter le nombre de caractères contenus dan
 
 <?php 
 
+$phrase = "Notre formation DL commence aujourd'hui <br>";
+
+echo $phrase;
+
+$letters = strlen($phrase);
+
+echo "The sentence cointains $letters letters and spaces!";
+
+
+//DONE WITH NO HELP FROM OUTSIDE SOURCES!
+
 /*  normally you can close this tag but since im doing only php for now there no need to close and reopen the tag
 
  $phrase= "Hello world!"; # by using the sign $ we are openning the new var
@@ -68,15 +79,3 @@ $average = $sumNotes / $nbNotes; // this just a calculator meaning you can also 
 echo $average;
 
 NOTES */
-
-
-$phrase = "Notre formation DL commence aujourd'hui <br>";
-
-echo $phrase;
-
-$letters = strlen($phrase);
-
-echo "The sentence cointains $letters letters and spaces!";
-
-
-//DONE WITH NO HELP FROM OUTSIDE SOURCES!

@@ -25,19 +25,19 @@ $countries = [
     "Italie" => "Rome", 
 ];
 
-// SOLUTION I WAS THINKING ABOUT, much more customasible and responsive 
-$countries2 = [
-    "France" => [
-        "capital" => "Paris", 
-        "website" => "http://www.paris.fr"
-    ],
-    "Allemagne" => [
-        "capital" => "Berlin", 
-        "website" => "http://www.berlin.de"
-    ],
-];
+// // SOLUTION I WAS THINKING ABOUT, much more customasible and responsive 
+// $countries2 = [
+//     "France" => [
+//         "capital" => "Paris", 
+//         "website" => "http://www.paris.fr"
+//     ],
+//     "Allemagne" => [
+//         "capital" => "Berlin", 
+//         "website" => "http://www.berlin.de"
+//     ],
+// ];
 
-function TABLEHML($countries) {
+function tableHTML($countries) {
     $PRS = "https://fr.wikipedia.org/wiki";
     $result = "<table border= 1> 
                 <thead> <!--table head -->
@@ -47,39 +47,39 @@ function TABLEHML($countries) {
                         <th>Wiki</th>
                     </tr>
                 </thead><tbody>";
-    foreach($countries as $country => $capital) {
-        $result .= "<tr>
-            <td>".mb_strtoupper( $country)."</td>
-            <td>".ucfirst ($capital)."</td>
-            <td><a target='blank' href='$PRS/$capital'>Wiki</a></td>
-            </tr>";
-    }
+    // foreach($countries as $country => $capital) {
+    //     $result .= "<tr>
+    //         <td>".mb_strtoupper( $country)."</td>
+    //         <td>".ucfirst ($capital)."</td>
+    //         <td><a target='blank' href='$PRS/$capital'>Wiki</a></td>
+    //         </tr>";
+    // }
      $result .= "</tbody></table>"; 
     return $result; 
 }
 
-function TABLEHML2($countries) {
-    $result = "<table border= 1> 
-                <thead> <!--table head -->
-                    <tr><!--table row-->
-                        <th>Country</th>
-                        <th>Capital</th>
-                        <th>Wiki</th>
-                    </tr>
-                </thead><tbody>";
-    foreach($countries as $country => $data) {
-        $result .= "<tr>
-            <td>".mb_strtoupper( $country)."</td>
-            <td>".ucfirst ($data["capital"])."</td>
-            <td><a target='blank' href='".$data['website']."'>Official website</a></td>
-            </tr>";
-    }
-     $result .= "</tbody></table>"; 
-    return $result; 
-}
+// function tableHTML2($countries) {
+//     $result = "<table border= 1> 
+//                 <thead> <!--table head -->
+//                     <tr><!--table row-->
+//                         <th>Country</th>
+//                         <th>Capital</th>
+//                         <th>Wiki</th>
+//                     </tr>
+//                 </thead><tbody>";
+//     foreach($countries as $country => $data) {
+//         $result .= "<tr>
+//             <td>".mb_strtoupper( $country)."</td>
+//             <td>".ucfirst ($data["capital"])."</td>
+//             <td><a target='blank' href='".$data['website']."'>Official website</a></td>
+//             </tr>";
+//     }
+//      $result .= "</tbody></table>"; 
+//     return $result; 
+// }
 
-echo TABLEHML($countries);
-echo TABLEHML2($countries2);
+echo tableHTML($countries);
+echo tableHTML2($countries2);
 
 
 

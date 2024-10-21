@@ -12,14 +12,35 @@ alimenterListeDeroulante($elements)
 
 <?php
 
+// This is how it was supposed to be done!
 $genders = ["Monsieur","Madame","Mademoiselle"];
-
-/* this is how I did it 
 
 
 function form($genders){
 
-    $result = "<form action = 'exo5.php' method = 'post'>"; //good 
+$result = "<form action = 'exo6.php' method = 'post'>";
+$result .= "<select id='gender' name='gender'>";
+
+foreach ($genders as $gender) {
+    $result .= "<option value=$gender>$gender</option>";
+}
+    
+$result .= "</select></form>" ;  
+
+return $result;
+
+}
+echo form($genders); 
+
+
+
+
+/* THIS IS HOW I DID IT
+
+
+function form($genders){
+    
+$result = "<form action = 'exo5.php' method = 'post'>"; //good 
 
     foreach ($genders as $gender) {
         $result = "<form action = 'exo5.php' method = 'post'>"; //this shouldnt be in the loop
@@ -41,23 +62,6 @@ function form($genders){
 
 
  
- This is how it was supposed to be done */
+*/
 
 
-
-
-function form($genders){
-
-$result = "<form action = 'exo6.php' method = 'post'>";
-$result .= "<select id='gender' name='gender'>";
-
-foreach ($genders as $gender) {
-    $result .= "<option value=$gender>$gender</option>";
-}
-    
-$result .= "</select></form>" ;  
-
-return $result;
-
-}
-echo form($genders); 

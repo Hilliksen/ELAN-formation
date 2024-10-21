@@ -14,16 +14,13 @@ afficherInput($nomsInput);
 
 $inputs = ["Name", "Surname", "City"];
 
+
 function form($inputs){
-    $result = "<form action = 'exo5.php' method = 'get'";
-    
-    
-    
-    
+    $result = "<form action = 'exo5.php' method = 'post'>";
     
     foreach ($inputs as $input) {
-        echo "<label for ='$input[0]'>Name</label>";
-        "<input type = 'text' id='fname' name = 'fname' <br>";
+        $result .= "<label for='$input'>$input</label>";
+        $result .= "<input id='$input' name='$input' type='text'> <br>";
     }
 
     $result .= "</form>" ;  
@@ -49,3 +46,18 @@ echo form($inputs);
                     //     "<input type = 'text' id='city' name = 'city' <br>";
 
 
+// $infos = [
+//     "Name" => "John",
+//     "Surname" => "Doe",
+//     "City" => "Chicago", 
+// ];
+
+
+
+// // <form action="exo5.php" method="">
+// // <label for="Name">First Name</label>
+// //     <input type="text">
+// // <label for="Surname">Surname</label>
+// //     <input type="text">
+// // <label for="City">City</label>
+// //     <input type="text">

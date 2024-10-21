@@ -47,16 +47,17 @@ function tableHTML($countries) {
                         <th>Wiki</th>
                     </tr>
                 </thead><tbody>";
-    // foreach($countries as $country => $capital) {
-    //     $result .= "<tr>
-    //         <td>".mb_strtoupper( $country)."</td>
-    //         <td>".ucfirst ($capital)."</td>
-    //         <td><a target='blank' href='$PRS/$capital'>Wiki</a></td>
-    //         </tr>";
-    // }
+    foreach($countries as $country => $capital) {
+        $result .= "<tr>
+            <td>".mb_strtoupper( $country)."</td>
+            <td>".ucfirst ($capital)."</td>
+            <td><a target='blank' href='$PRS/$capital'>Find out more about the city!</a></td>
+            </tr>";
+    }
      $result .= "</tbody></table>"; 
     return $result; 
 }
+echo tableHTML($countries);
 
 // function tableHTML2($countries) {
 //     $result = "<table border= 1> 
@@ -78,8 +79,7 @@ function tableHTML($countries) {
 //     return $result; 
 // }
 
-echo tableHTML($countries);
-echo tableHTML2($countries2);
+// echo tableHTML2($countries2);
 
 
 

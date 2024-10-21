@@ -15,10 +15,11 @@ function form($options){
      $result = "<form action = 'exo7.php' method = 'post'>";
     
      foreach ($options as $option) {
-        $result .= "<input type='checkbox' name=$option>  ";
+        $result .= "<input type='checkbox' name=$option>  "; //fixed by adding "name"
         $result .= "<label for=$option>$option</label>";
 
      }
+     $result .= "</form>";
 
 return $result;
 }

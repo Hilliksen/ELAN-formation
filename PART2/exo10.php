@@ -40,8 +40,8 @@ function form($infos, $genders , $careers){
         $result .= "<input type='checkbox' name='career'>";
         $result .= "<label for='$career' name='$career'>$career</label>";
     }
+    $result .= "<button>Submit</button>"; //button has to BE in the <form>!!!
     $result .= "</form>" ;  
-    $result .= "<button>Submit</button>"; //button
     return $result; //always have only one "result" as if u do result 1 and then have 3 more the code will not show them as the function stops at the FIRST one
 }
 

@@ -14,11 +14,11 @@ function form($options){
      $result = "<form action = 'exo9.php' method = 'post'>";
     
      foreach ($options as $option) {
-        $result .= "<input type='radio'";
-        $result .= "<label for=$option>$option</label>";
+        $result .= "<input type='radio' name='radio' id='radio'";
+        $result .= "<label for=$option id='radio'>$option</label>";
 
      }
-
+     $result .= "</form>"; //fixed by addding closing form
 return $result;
 }
 

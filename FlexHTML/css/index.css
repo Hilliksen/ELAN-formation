@@ -9,6 +9,7 @@
 
 #container {
   display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
   background-color: rgba(68, 117, 136, 0.548);
   justify-content: center;
@@ -26,7 +27,12 @@
   transition: 0.7s;
 }
 .card:hover {
-  transform: translateY(-15px);
+  /* transform: translateY(-15px); */
+}
+
+.card:hover .heart {
+  left: 0;
+  opacity: 1;
 }
 
 .card-header {
@@ -65,10 +71,20 @@
 }
 
 .heart {
+  display: flex;
   width: 50px;
   height: 50px;
   background: red;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s; /* transition is in the .heart because this is an element and not in the hover because thats an action */
+  opacity: 0;
+}
+
+.heart a {
+  color: #fff;
 }

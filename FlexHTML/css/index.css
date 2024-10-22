@@ -35,6 +35,11 @@
   opacity: 1;
 }
 
+.card:hover img {
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
 .card-header {
   height: 200px;
   position: relative;
@@ -49,10 +54,10 @@
   /* border-radius: 10px 10px 0px 0px; */
 }
 
-.card-header img:hover {
+/* .card-header img:hover {
   filter: grayscale(0);
   transform: scale(1.03);
-}
+} */
 
 .card-text {
   padding: 30px;

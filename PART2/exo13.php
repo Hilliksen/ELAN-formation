@@ -15,7 +15,7 @@ $email = trim($email); // start using this
 
 function validate($email){
 
-    $result = filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+    $result = filter_var($email, FILTER_VALIDATE_EMAIL) !== false; // !== means doesnt equal
     return $result;
 
 }

@@ -35,16 +35,18 @@ chaîne de caractère représentant une date.
 
 
 
-$date = "12-05-2024";
+$date = "12-06-2024";
 
-function form($date){
-    //Creates an IntlDateFormatter instance for french 
+function form($date){//Creates an IntlDateFormatter instance for french 
     $locale= 'fr_FR'; //locale is used to determin what language you will be using (in lower case) and from which country u want (in uppercase)
     $formatter = new IntlDateFormatter($locale, IntlDateFormatter::LONG, IntlDateFormatter::NONE, null, IntlDateFormatter::GREGORIAN, 'd MMMM, y'); // the :: are used to access a constant like LONG or NONE, LONG means that we want the format of our date to be 12 april 2020 instaed of 12/04/2020 (thats short),  
-    $textDate = date("j F, Y", strtotime($date));
+    $text = strtotime($date);
+
+    $textDate = $formatter ->format($text);
 
     return $textDate;
 }
+    
 echo form($date);
 
 //Visit this site to understand whats going on https://www.php.net/manual/en/intldateformatter.format.php

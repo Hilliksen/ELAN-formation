@@ -7,6 +7,8 @@
 #wrapper {
   width: 80%;
   margin: auto;
+  /* display: flex;
+  flex-wrap: wrap;  thechnicallly shoulve worked but didnt*/
 }
 
 body {
@@ -25,7 +27,7 @@ header {
 
 header h2 {
   /* position: relative; */
-  font-size: 50px;
+  font-size: 3vw;
   color: #fff;
 }
 .simpsons img {
@@ -37,9 +39,8 @@ header h2 {
 
 main {
   background-color: #fff;
-
   width: 100%;
-
+  text-align: justify;
   display: flex;
   gap: 5vh;
   padding: 2em 1em;
@@ -49,22 +50,20 @@ nav {
   height: 40%;
   display: flex;
   align-items: center;
-
   background-color: #5ea9f0d7;
-
-  padding: 20px;
+  padding: 2vw;
 }
 
 nav ul {
   list-style: none;
-  padding: 20px;
+  padding: 2vw;
   display: flex;
 
   justify-content: center;
 }
 nav ul li a {
-  padding: 8px;
-  border: 10px;
+  padding: 0.5vw;
+  border: 1vw;
   color: white;
   display: block;
   text-align: center;
@@ -74,19 +73,19 @@ nav ul li a {
   padding-top: 5vh;
 }
 #text h1 {
-  padding: 20px;
+  padding: 2vw;
   color: rgb(255, 211, 13);
-  font-size: 60px;
+  font-size: 3vw;
 }
 
 #text p {
-  word-spacing: 5px;
+  word-spacing: 0.5vw;
 }
 
 aside {
   background-color: #5ea9f0d7;
   width: 20%;
-  padding: 20px;
+  padding: 2vw;
 }
 aside figcaption {
   font-size: 22px;
@@ -97,7 +96,7 @@ aside figcaption {
 aside figure img {
   width: 100%;
 
-  border-radius: 2px;
+  border-radius: 0.2vw;
   border: solid;
   border-color: #fff;
 }
@@ -131,3 +130,11 @@ section {
 section {
   background-color: green !important;
 } */
+
+@media screen and (max-width) {
+} /*  this means that any media that has a screen and the max width then the css that you put between the {} will apply  @media MUST be the las thing in the css because if its not the code will ignore it as theres already another tag behind it https://www.youtube.com/watch?reload=9&time_continue=379&v=yU7jJ3NbPdA&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com&source_ve_path=MTM5MTE3LDEzOTExNywyODY2Ng 
+
+
+https://css-tricks.com/responsive-layouts-fewer-media-queries/
+
+*/

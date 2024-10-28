@@ -161,7 +161,25 @@ section {
   background-color: green !important;
 } */
 
-@media screen and (max-width) {
+@media screen and (max-width: 768px) {
+  nav,nav ul,nav ul li{
+    width: 100%;
+    text-align: center;
+  }
+  
+  main{
+    flex-direction: column;
+  }
+  aside{
+    width: 100%;
+  }
+
+
+
+
+
+
+
 } /*  this means that any media that has a screen and the max width then the css that you put between the {} will apply  @media MUST be the las thing in the css because if its not the code will ignore it as theres already another tag behind it https://www.youtube.com/watch?reload=9&time_continue=379&v=yU7jJ3NbPdA&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com&source_ve_path=MTM5MTE3LDEzOTExNywyODY2Ng 
 
 

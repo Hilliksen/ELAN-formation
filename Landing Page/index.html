@@ -3,62 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        </style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
     <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <nav class="first-nav">
-          <ul>
-            <h2>Kucra</h2>
-          <li>
-            <a href="">HOME</a>
-            <a href="">FEATURES</a>
-            <a href="">CLIENT</a>
-            <a href="">PRICING</a>
-            <a href="">FAQ</a>
-            <a href="">ABOUT</a>
-            <a href="">BLOG</a>
-            <a href="">CONTACT</a>
-            <a href="#">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-        <section id="search">
-            <article>  
-                <h1>We are StartUp Creative Kucra Agency</h1>
-                <p>
-                Carefully crafted after anlysing the need of different industries and
-                the design achieves a great balance between purpose & presentation
-                </p>
-                <form action="" method="get">
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" requiredplaceholder="Enter your email"/>
-                    <button type="submit" id="subscribeButton">Subscribe</button>
-                </form>
-            </article>
-                <figure class="logo">
-                    <img src="img/illustration.svg" alt="" />
-                </figure>
-        </section>
-      </nav>
-    </header>
-
-    <main>
+        <nav class="first-nav">
+                <h2 class="title">Kucra</h2>
+                <ul class="main-nav">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">FEATURES</a></li>
+                    <li><a href="">CLIENTS</a></li>
+                    <li><a href="">PRICING</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+                <ul class="main-nav-icons">
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+              </nav>
+              <section id="search">
+                  <div>  
+                      <h1>We are StartUp Creative Kucra Agency</h1>
+                      <p>
+                      Carefully crafted after anlysing the need of different industries and
+                      the design achieves a great balance between purpose & presentation
+                      </p>
+                      <form action="" method="get">
+                          <label for="email"></label>
+                          <input type="email" id="email" name="email" requiredplaceholder="Enter your email"/>
+                          <button type="submit" id="subscribeButton">Subscribe</button>
+                      </form>
+                    </div>
+                  <figure class="logo">
+                      <img src="img/illustration.svg" alt="" />
+                  </figure>
+              </section>
+      </header>
+      
+      <main>
 
       <section id="cards">
-        <h2>Products Features</h2>
+        <h2 class="title">Products Features</h2>
         <p>
           It is a long established fact that a reader will be of a page when
           establised fact looking at its layout
@@ -68,7 +66,7 @@
             <!--ICON-->
           </div>
           <div class="card-text">
-            <h1>Digital Design</h1>
+            <h2 class="title">Digital Design</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               iusto necessitatibus, nisi unde aliquam, cupiditate ad fuga totam
@@ -82,7 +80,7 @@
             <!--ICON-->
           </div>
           <div class="card-text">
-            <h1>Unlimited Colors</h1>
+            <h2 class="title">Unlimited Colors</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               iusto necessitatibus, nisi unde aliquam, cupiditate ad fuga totam
@@ -96,7 +94,7 @@
             <!--ICON-->
           </div>
           <div class="card-text">
-            <h1>Strategy Solutions</h1>
+            <h2 class="title">Strategy Solutions</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               iusto necessitatibus, nisi unde aliquam, cupiditate ad fuga totam
@@ -108,7 +106,7 @@
       </section>
 
       <section id="Team">
-        <h2>
+        <h2 class="title">
           We're dynamic team of talented people of innovative & marketing
           experts
         </h2>
@@ -118,45 +116,45 @@
           assumenda
         </p>
         <div class="team-card">
-          <h3>1499+ Projects</h3>
+          <h3 class="sub-title">1499+ Projects</h3>
           <div class="circle-picture">
             <img src="img/person1.png" alt="Anna G.Wilhite" />
           </div>
-          <h4>Anna G.Wilhite</h4>
+          <h4 class="name-team">Anna G.Wilhite</h4>
           <p>CEO/Founder</p>
         </div>
 
         <div class="team-card">
-          <h3>1080K Satisfied clients</h3>
+          <h3 class="sub-title">1080K Satisfied clients</h3>
           <div class="circle-picture">
             <img src="img/person2.png" alt="William S. Blay" />
           </div>
-          <h4>William S. Blay</h4>
+          <h4 class="name-team">William S. Blay</h4>
           <p>CTO/Co-Founder</p>
         </div>
 
         <div class="team-card">
-          <h3>608 Team Members</h3>
+          <h3 class="sub-title">608 Team Members</h3>
           <div class="circle-picture">
             <img src="img/person3.png" alt="Maria B. Morales" />
           </div>
-          <h4>Maria B. Morales</h4>
+          <h4 class="name-team">Maria B. Morales</h4>
           <p>Web Designer</p>
         </div>
 
         <div class="team-card">
-          <h3>315 Projects</h3>
+          <h3 class="sub-title">315 Projects</h3>
           <div class="circle-picture">
             <img src="img/person4.png" alt="Luke L. Johnston" />
           </div>
-          <h4>Luke L. Johnston</h4>
+          <h4 class="name-team">Luke L. Johnston</h4>
           <p>Web Developer</p>
         </div>
       </section>
 
       <section id="parallax">
         <figure class="para">
-          <h3>Lets get starte with Kucra</h3>
+          <h3 class="sub-title">Lets get starte with Kucra</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             minima blanditiis saepe possimus deleniti. Beatae facere eum, eius
@@ -168,7 +166,7 @@
       </section>
 
       <section class="sponsors">
-        <h2>What your clients says</h2>
+        <h2 class="title">What your clients says</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, vitae
           consectetur? Eveniet excepturi quisquam consectetur aperiam maiores
@@ -182,7 +180,7 @@
 
       <section class="pricing">
         <article class="pricing-text">
-          <h3>We are digital creative Landing page</h3>
+          <h3 class="sub-title">We are digital creative Landing page</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
             necessitatibus id labore maxime asperiores nisi laboriosam suscipit
@@ -191,11 +189,11 @@
           </p>
           <section class="happy">
             <div class="happy-card">
-              <h2>4957</h2>
+              <h2 class="title">4957</h2>
               <p>Happy users</p>
             </div>
             <div class="happy-card">
-              <h2>1599</h2>
+              <h2 class="title">1599</h2>
               <p>Completed Projects</p>
             </div>
             <button></button>
@@ -211,26 +209,26 @@
         </section>
 
         <section class="blog">
-            <h2>Our Blog</h2>
+            <h2 class="title">Our Blog</h2>
             <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis veritatis at optio. Eum odio omnis tempora </p>
-          <div class="blog-header">
-            <img src="img/blog1.png" alt="blog 1" />
-          </div>
-          <div class="blog-text">
-            <h3>Doing a cross country road trip</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
-              cum eligendi dolorum accusantium maxime voluptate omnis fuga
-              tempora nostrum dolores voluptatum ullam minima ducimus, officiis
-              iusto impedit voluptas iure.
-            </p>
-          </div>
+            <div class="blog-header">
+                <img src="img/blog1.png" alt="blog 1" />
+            </div>
+            <div class="blog-text">
+                <h3 class="sub-title">Doing a cross country road trip</h3>
+                <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
+                cum eligendi dolorum accusantium maxime voluptate omnis fuga
+                tempora nostrum dolores voluptatum ullam minima ducimus, officiis
+                iusto impedit voluptas iure.
+                </p>
+            </div>
           <a href="">Read more</a>
           <div class="blog-header">
             <img src="img/blog2.png" alt="blog 2" />
           </div>
           <div class="blog-text">
-            <h3>New exihibition at our Museum</h3>
+            <h3 class="sub-title">New exihibition at our Museum</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
               cum eligendi dolorum accusantium maxime voluptate omnis fuga
@@ -243,7 +241,7 @@
             <img src="img/blog3.png" alt="blog 3" />
           </div>
           <div class="blog-text">
-            <h3>Design your apps in your own way</h3>
+            <h3 class="sub-title">Design your apps in your own way</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
               cum eligendi dolorum accusantium maxime voluptate omnis fuga
@@ -255,6 +253,8 @@
         </section>
       </section>
     </main>
+    
+    <!-- FOOTER -->
     <footer>
       <div class="footer-container">
         <nav class="footer-nav">

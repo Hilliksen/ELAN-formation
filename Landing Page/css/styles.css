@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+nav.first-nav {
+  background-color: rgb(139, 195, 245);
+  min-height: 50vh;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  gap: 8vh;
+}
+nav ul li a {
+  gap: ;
+}
+
+#search {
+  display: flex;
+  /* align-content: center;
+  justify-content: center; */
+  flex-direction: row;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+}
+form {
+}

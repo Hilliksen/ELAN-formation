@@ -1,7 +1,9 @@
 :root {
   --titleColor: green;
-  --backgroundColor: rgb(139, 196, 245);
+  --radicalGradient:  (rgb(139, 196, 245),#1294b8);
   --textColor: white;
+  --fontsizeText:1.5rem;
+  --subtitle:4rem;
 }
 
 * {
@@ -12,24 +14,24 @@
 
 body {
   font-family: "Poppins";
-  background-color: antiquewhite;
+  background-image: radial-gradient(rgb(139, 196, 245),#1294b8);
 }
 
 .first-nav {
   padding: 2rem;
   display: flex;
   justify-content: space-around;
-  background-color: var(--backgroundColor);
-  /* justify-content: center;
-  align-items: center;; */
 }
+
 .first-nav h2 {
-  font-size: 3rem;
+  font-size: var(--subtitle);
+  font-weight: 700;
   color: var(--textColor);
 }
 
 .first-nav ul {
   list-style: none;
+  font-size: var(--fontsizeText);
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -48,9 +50,90 @@ body {
 
 #search {
   display: flex;
-  padding: 10rem;
+  padding: 2rem;
 }
 
-.logo img {
-  width: 50rem;
+.searchbar{
+  padding: 4rem 3rem;
+  width: 40%;
 }
+
+.searchbar h1{
+  padding-bottom: 1rem;
+  font-size: 5rem;
+  line-height: 1.2;
+  }
+
+.searchbar p{
+  flex: wrap;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  word-spacing: 0.1rem;
+  text-align: left;
+}
+
+.logo {  
+  width: 60%;
+}
+
+.logo img{
+  object-fit: cover;
+}
+
+.searchbar form {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: white;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  
+}
+
+.searchbar form input{
+  font-size: var(--fontsizeText);
+  padding-left: 1rem;
+  padding-right: 5rem;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+
+.searchbar form button{
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem ;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color:cornflowerblue;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 3px #999;
+}
+
+.searchbar form button:hover{
+  background-color: rgba(100, 149, 237, 0.8);
+}
+
+.searchbar form button:active{
+  background-color: rgba(100, 149, 237, 0.8);
+  box-shadow:0 1.5px #666;
+  transform: translateY(2px);
+} 
+/*NAV DONE*/
+#cards{
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem
+  ;
+}
+

@@ -1,6 +1,6 @@
 :root {
   --titleColor: green;
-  --radicalGradient:  (rgb(139, 196, 245),#1294b8);
+  --radicalGradient:  radial-gradient(rgb(139, 196, 245),#1294b8);
   --textColor: white;
   --fontsizeText:1.5rem;
   --subtitle:4rem;
@@ -40,9 +40,15 @@ body {
   color: var(--textColor);
   text-decoration: none;
 }
+
+.main-nav{
+  margin: 0 15rem; 
+ }
+
 .main-nav-icons li a:hover {
   opacity: 0.8;
 }
+
 .main-nav li a:hover {
   /* color: rgb(206, 196, 196); */
   color: rgb(224, 209, 209);
@@ -65,7 +71,6 @@ body {
   }
 
 .searchbar p{
-  flex: wrap;
   padding-top: 1rem;
   padding-bottom: 2rem;
   font-size: 1.8rem;
@@ -127,13 +132,38 @@ body {
   transform: translateY(2px);
 } 
 /*NAV DONE*/
-#cards{
-  min-height: 100vh;
+ #cards{
+  min-height: 40rem;
   background: #ffffff;
   display: flex;
-  align-items: center;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  gap: 5rem
-  ;
+ }
+
+
+.card{
+  background:var(--radicalGradient);
+  width: 18rem;
+  height: 18rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem;
+  margin-top: 10arem;
 }
+.card-text{
+  padding: 1rem;
+  color: var(--textColor);
+  font: var(--fontsizeText);
+  font-size: small;
+  text-align: center;
+}
+
+.card-header {
+  color: var(--textColor);
+  float: center;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 2rem;
+} 
+
 

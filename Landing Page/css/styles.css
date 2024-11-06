@@ -1,27 +1,37 @@
-:root {
+:root{ /*! Root allows u to make one thing ver specific to every thing so its easier to update/change */ 
   --titleColor: green;
   --radicalGradient:  radial-gradient(rgb(139, 196, 245),#1294b8);
-  --textColor: white;
+  --color: white;
   --fontsizeText:1.5rem;
   --subtitle:4rem;
+  --sectionPad: 2rem;
+  --sectionHei: 40rem;
+  --gap:5rem;
+  --opacity: 60%;
+  --transition: 0.7s;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} /*! always usse this above */
 
-body {
+body /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ {
   font-family: "Poppins";
-  background-image: radial-gradient(rgb(139, 196, 245),#1294b8);
+  background-image: var(--radicalGradient);
 }
 
-/* NAV */
+/*! dont really use this as its too general, imagine u have more than 1 page
+p{
+  opacity: 60%;
+} */
 
+
+/** NAV */
 
 .first-nav {
-  padding: 2rem;
+  padding: var(--sectionPad);
   display: flex;
   justify-content: space-around;
 }
@@ -29,7 +39,7 @@ body {
 .first-nav h2 {
   font-size: var(--subtitle);
   font-weight: 700;
-  color: var(--textColor);
+  color: var(--color);
 }
 
 .first-nav ul {
@@ -40,7 +50,7 @@ body {
   align-items: center;
 }
 .first-nav ul li a {
-  color: var(--textColor);
+  color: var(--color);
   text-decoration: none;
 }
 .main-nav-icons li a:hover {
@@ -53,7 +63,7 @@ body {
 
 #search {
   display: flex;
-  padding: 2rem;
+  padding: var(--sectionPad);
 }
 
 .searchbar{
@@ -109,7 +119,7 @@ body {
   cursor: pointer;
   padding: 1rem;
   font-size: 1rem ;
-  color: white;
+  color:var(--color);
   text-transform: uppercase;
   font-weight: 700;
   background-color:cornflowerblue;
@@ -129,44 +139,45 @@ body {
   box-shadow:0 1.5px #666;
   transform: translateY(2px);
 } 
+/**NAV DONE*/
 
-/*NAV DONE*/
+
+/**CARDS */
+
+#cards{
+  min-height: var(--sectionHei);
+  background: var(--color);
+}
+
 
 .cards-title{
   text-align: center;
-  background-color: white;
-  padding: 2rem;
-  padding-top: 5rem;
-
+  padding: var(--sectionPad);
 }
-#cards{
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 40rem;
-  background: #ffffff;
+
+.container{
+  padding: var(--sectionPad);
+  display: flex;    /* ! put the display flex in here the container of cards instead of the id cards thus making the title and p ablet to get well placed */
   align-items: center;
   justify-content: center;
-  gap: 9rem;
+  gap: var(--gap);
 }
 
 .card{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 22rem;
-  border-radius: 1rem;
-  padding: 2rem;
   background: var(--radicalGradient);
+  padding: var(--sectionPad);
+  border-radius: 1rem;
 }
 
 .card-header, .card-header i{
   padding: 1rem;
   font-size: 5rem;
-  color: white;
+  color: var(--color);
+  text-align: center;
 }
 
 .card-text{
-  color: white;
+  color: var(--color);
   text-align: center;
 }
 /* .cards-title{
@@ -176,18 +187,79 @@ body {
   margin: 10rem;
 } */
 
+/** CARDS DONE */
+
+
+
+/** CARDS-TEAM */
+
+#team{
+  height: var(--sectionHei);
+  transition: gryscale;
+  padding: var(--sectionPad);
+
+}
+
+.team-title{
+  text-align: center;
+  padding: var(--sectionPad);
+}
+
+.team-container{
+  padding: var(--sectionPad);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.team-card{
+  text-align: center;
+  overflow: hidden;
+}
+
+/* this is TOO much  .team-title p, .team-card p  check if this is specific enough if not try with p class */
+#team p{
+  opacity: 50%;
+}
+
+.team-pic{
+  position: relative;
+}
+
+.team-pic img{ /*! You must used "img" to alter it in anyway*/
+  width: 250px;
+  border-radius: 50%; /**CIRCLE*/
+  filter: grayscale(1); /** Changes color to gray, 1 means the f*/
+  transition:var(--transition) ; /**How fast it changes*/
+  
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -50px;
+
+}
+
+
+.team-pic:hover img{
+  filter: grayscale(0);
+  transition: var(--transition);
+}
+
+.team-pic:hover i{
+  left: 50px;
+  top: 50px;
+}
 
 
 
 
 
-
-
-
-
-
-
- 
+/*  
 #team{
   display: flex;
   flex-wrap: wrap;
@@ -212,8 +284,16 @@ body {
   object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
+  filter: grayscale(1);
+  transition: 0.7s;
+
+}
+
+.team-pic img:hover{
+  filter: grayscale(0);
+  transition: 0.7;
 }
 
 .name-team{
   text-align: center;
-}
+} */

@@ -1,6 +1,6 @@
 :root {
   --titleColor: green;
-  --radicalGradient:  (rgb(139, 196, 245),#1294b8);
+  --radicalGradient:  radial-gradient(rgb(139, 196, 245),#1294b8);
   --textColor: white;
   --fontsizeText:1.5rem;
   --subtitle:4rem;
@@ -16,6 +16,9 @@ body {
   font-family: "Poppins";
   background-image: radial-gradient(rgb(139, 196, 245),#1294b8);
 }
+
+/* NAV */
+
 
 .first-nav {
   padding: 2rem;
@@ -65,7 +68,7 @@ body {
   }
 
 .searchbar p{
-  flex: wrap;
+  flex-wrap: wrap;
   padding-top: 1rem;
   padding-bottom: 2rem;
   font-size: 1.8rem;
@@ -126,14 +129,91 @@ body {
   box-shadow:0 1.5px #666;
   transform: translateY(2px);
 } 
+
 /*NAV DONE*/
+
+.cards-title{
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  padding-top: 5rem;
+
+}
 #cards{
-  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40rem;
   background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 9rem;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 22rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: var(--radicalGradient);
+}
+
+.card-header, .card-header i{
+  padding: 1rem;
+  font-size: 5rem;
+  color: white;
+}
+
+.card-text{
+  color: white;
+  text-align: center;
+}
+/* .cards-title{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem
-  ;
+  margin: 10rem;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+#team{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40rem;
+  background: red;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  gap: 3rem;
+}
+.sub-title{
+  text-align: center;
+}
+.team-pic{
+  padding: 2rem;
+  height: 250px;
+
+}
+.team-pic img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
+.name-team{
+  text-align: center;
+}

@@ -5,22 +5,29 @@
   --fontsizeText:1.5rem;
   --subtitle:4rem;
   --sectionPad: 2rem;
-  --sectionHei: 40rem;
+  /* --sectionHei: 40rem; */ /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   --gap:5rem;
   --opacity: 60%;
   --transition: 0.7s;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 } /*! always usse this above */
 
-body /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ {
-  font-family: "Poppins";
+body {  /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ 
   background-image: var(--radicalGradient);
 }
+p{
+  line-height: 22px;
+
+}
+
+
 
 /*! dont really use this as its too general, imagine u have more than 1 page
 p{
@@ -75,7 +82,7 @@ p{
   padding-bottom: 1rem;
   font-size: 5rem;
   line-height: 1.2;
-  }
+}
 
 .searchbar p{
   flex-wrap: wrap;
@@ -145,7 +152,7 @@ p{
 /**CARDS */
 
 #cards{
-  min-height: var(--sectionHei);
+  min-height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   background: var(--color);
 }
 
@@ -160,6 +167,7 @@ p{
   display: flex;    /* ! put the display flex in here the container of cards instead of the id cards thus making the title and p ablet to get well placed */
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: var(--gap);
 }
 
@@ -167,6 +175,7 @@ p{
   background: var(--radicalGradient);
   padding: var(--sectionPad);
   border-radius: 1rem;
+  flex: 1 1 25%; /**FLEX lets u something check out later*/ 
 }
 
 .card-header, .card-header i{
@@ -194,10 +203,9 @@ p{
 /** CARDS-TEAM */
 
 #team{
-  height: var(--sectionHei);
-  transition: gryscale;
+  height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   padding: var(--sectionPad);
-
+  background: var(--color);
 }
 
 .team-title{
@@ -207,16 +215,20 @@ p{
 
 .team-container{
   padding: var(--sectionPad);
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--gap);
+  gap: var(--gap); 
+}
+
+.team-subtitle, .team-description{
+  padding: 1rem; 
 }
 
 .team-card{
   text-align: center;
-  overflow: hidden;
+
 }
 
 /* this is TOO much  .team-title p, .team-card p  check if this is specific enough if not try with p class */
@@ -225,38 +237,228 @@ p{
 }
 
 .team-pic{
+  
   position: relative;
+  overflow: hidden;  /**Hides everything that will not be visible to the user but its still there*/
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; 
 }
+/*! width: 250px; border-radius: 50%; ALL OF THIS SHOULDVE BEEN IN THE CONTAINER TO CHANGE THE SIZE OF CONTAINER NOT TO CHANGE THE PIC*/
 
 .team-pic img{ /*! You must used "img" to alter it in anyway*/
-  width: 250px;
-  border-radius: 50%; /**CIRCLE*/
   filter: grayscale(1); /** Changes color to gray, 1 means the f*/
   transition:var(--transition) ; /**How fast it changes*/
-  
+  /* transition: transform 0.3s ease; */
+  height: 100%;
 }
 
 .socials{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50px;
+  height: 100px;
   position: absolute;
-  left: -50px;
-
+  top: 40px;
+  left: -35px;
+  transition: var(--transition); /**Goes back slower*/
 }
+
+.socials a{
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
 
 
 .team-pic:hover img{
   filter: grayscale(0);
   transition: var(--transition);
+  transform: scale(1.1);
 }
 
-.team-pic:hover i{
-  left: 50px;
-  top: 50px;
+.team-pic:hover .socials{
+  left: 0px;
+  top: 70px;
+  transition: var(--transition);
+  
+}
+
+/** CARDS TEAM DONE*/
+
+/**PARALLAX*/
+
+#parallax{
+  min-height: 30rem; /*! USING MIN-HEIGHT IS OK BECAUSE IT DOESNT LIMIT THE WHOLE SECTION MEANING IT DOESNT GET RUINED */
+  background: url("../img/parallax.png") ;
+  background-attachment: fixed;
+  position: relative; /*! USING CHAT GPT */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+/** PARALLAX */
+/*! USING CHAT GPT */
+/*? what is ::before and what does it do?*/
+
+/* h1::before {
+  content: "Prefix - ";  /* Adds the prefix before the actual heading /
+  color: red;
+} */
+
+/*! the ::before is a layer that goes before the element, not sure yet */
+#parallax::before {
+  content: "";  /* Necessary to make the pseudo-element work */
+  position: absolute;  /* Position it on top of the background */
+  top: 0; left: 0;  /* Cover the whole container */
+  width: 100%; height: 100%;  /* Cover the full height and width */
+  background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay with opacity */
+  z-index: 1;  /* Make sure it's behind the text */
+}
+/*! CHATGPT DONE */
+.parallax-text{
+  text-align: center;
+  color: var(--color);
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-text h3 {
+  font-size: 2rem;
+  padding: var(--sectionPad);
+}
+
+.parallax-text p{
+  text-align: center;
+  padding: 0 15rem;
+}
+
+.parallax-text button{
+  cursor: pointer;
+  margin: 2rem;
+  padding: 1rem 3rem;
+  background-color: transparent;
+  font-size: var(--fontsizeText);
+  color: var(--color);
+  border-radius: 0.5rem;
+}
+
+/** PARALLAX DONE */ 
+
+/** SPONSORS */
+
+#sponsors{
+  min-height: 40rem;
+  background: var(--color) ;
+  padding: var(--sectionPad);
+}
+
+.sponsors-text{
+  text-align: center;
+  padding: 5rem 2rem;
+  font-size: 1.5rem;
+/*? how to make it align in the center without using margin left */
+/*! The answer is just make the padding 0 on top and bottom and whatever rem you want on the sides thus aligning the text in the center, if you use this method you dont have to use max width or whatever else */
+}
+
+.sponsors-text h2{
+  padding: 25px;
+}
+.sponsors-text p{
+  opacity: var(--opacity);
+  padding: 0 15rem;
+}
+
+.sponsor-link{
+  padding-top: var(--sectionPad);
+  display: flex;
+  flex: 1 1 25%;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.sponsor-link a{
+  padding: 2rem 0;
+
+}
+
+.sponsor-link img{
+  width: 75%;
+  opacity: 50%;
+  border-radius: 50%;
+}
+/** SPONSORS DONE */ 
+
+/** PRICING */
+
+#pricing{
+  min-height:40rem; 
+  background: var(--color);
+  padding: var(--sectionPad);
+  display: flex;
+}
+.pricing-text{
+  padding: var(--sectionPad);
+  width: 50%;
+  padding-bottom: 1rem;
+  padding-left: 7rem; /*! By using this i dont have to give each element padding and margin, why i didnt think of it earlier?*/
+}
+.pricing-subtext{
+  /* padding: 2rem;
+  margin-left: 5rem; */ /*! use it in container*/
+}
+
+.pricing-subtext h2{
+  padding-bottom: 2rem;
+}
+
+.pricing-subtext p{
+  width: 75%;
+  opacity: var(--opacity);
+}
+
+.creativity{
+  padding: var(--sectionPad);
+  width: 50%;
+}
+.creativity img{
+  width: 100%;
+  padding: 2rem;
 }
 
 
+.happy{  /*! USING NESTING */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: var(--sectionPad) 0;
+    
+    &.happy h3{
+      font-size: var(--fontsizeText);
+    }
 
+    &.happy p{
+      opacity: var(--opacity);
+    }
+
+}
+
+
+#pricing button{
+  padding: 1rem 2.5rem;
+  background-color: #1294b8;
+  font-size: 1.2rem;
+  color: var(--color);
+  border-radius: 0.5rem;
+}
 
 
 /*  

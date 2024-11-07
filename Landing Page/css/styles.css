@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{ /*! Root allows u to make one thing ver specific to every thing so its easier to update/change */ 
   --titleColor: green;
   --radicalGradient:  radial-gradient(rgb(139, 196, 245),#1294b8);
   --color: white;
   --fontsizeText:1.5rem;
+  --fontsizeTitle:2.5rem;
   --subtitle:4rem;
   --sectionPad: 2rem;
+  --paddingText: 0 15rem;
   /* --sectionHei: 40rem; */ /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   --gap:5rem;
   --opacity: 60%;
   --transition: 0.7s;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +24,9 @@
 body {  /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ 
   background-image: var(--radicalGradient);
 }
+
 p{
   line-height: 22px;
-
 }
 
 
@@ -35,30 +37,33 @@ p{
 } */
 
 
-/** NAV */
+/*! NAV */
 
 .first-nav {
   padding: var(--sectionPad);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-}
+  
+    &.first-nav h2 {
+    font-size: var(--subtitle);
+    font-weight: 700;
+      color: var(--color);
+    }
+    
+    &.first-nav ul {
+      list-style: none;
+      font-size: var(--fontsizeText);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-.first-nav h2 {
-  font-size: var(--subtitle);
-  font-weight: 700;
-  color: var(--color);
-}
-
-.first-nav ul {
-  list-style: none;
-  font-size: var(--fontsizeText);
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-.first-nav ul li a {
-  color: var(--color);
-  text-decoration: none;
+    &.first-nav ul li a {
+      color: var(--color);
+      text-decoration: none;
+    }
 }
 .main-nav-icons li a:hover {
   opacity: 0.8;
@@ -146,10 +151,10 @@ p{
   box-shadow:0 1.5px #666;
   transform: translateY(2px);
 } 
-/**NAV DONE*/
+/*!NAV DONE*/
 
 
-/**CARDS */
+/*!CARDS */
 
 #cards{
   min-height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
@@ -160,6 +165,16 @@ p{
 .cards-title{
   text-align: center;
   padding: var(--sectionPad);
+
+  &.cards-title h2{
+    font-size: var(--fontsizeTitle);
+    padding-bottom: 1rem;
+  }
+
+  &.cards-title p{
+    opacity: var(--opacity);
+    padding: var(--paddingText);
+  } /*! NEW VAR FOR PADDING P,  ALSO USED NEW TECHNIQUE CALLED NESTING  */
 }
 
 .container{
@@ -188,6 +203,15 @@ p{
 .card-text{
   color: var(--color);
   text-align: center;
+
+    &.card-text h2{
+      padding-bottom: 1rem;
+    }
+
+    &.card-text p{
+      opacity: var(--opacity);
+    }
+
 }
 /* .cards-title{
   display: flex;
@@ -196,21 +220,34 @@ p{
   margin: 10rem;
 } */
 
-/** CARDS DONE */
+/*! CARDS DONE */
 
 
 
-/** CARDS-TEAM */
+/*! CARDS-TEAM */
 
 #team{
   height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   padding: var(--sectionPad);
   background: var(--color);
-}
+
+   &#team p{
+      opacity: 50%;
+   } /*! ADDED */ 
+} 
 
 .team-title{
   text-align: center;
   padding: var(--sectionPad);
+    
+
+  &.team-title h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
+  &.team-title p{
+    padding: var(--paddingText);
+  }/*! ADDED */ 
 }
 
 .team-container{
@@ -232,9 +269,7 @@ p{
 }
 
 /* this is TOO much  .team-title p, .team-card p  check if this is specific enough if not try with p class */
-#team p{
-  opacity: 50%;
-}
+
 
 .team-pic{
   
@@ -289,9 +324,11 @@ p{
   
 }
 
-/** CARDS TEAM DONE*/
+/*! CARDS TEAM DONE */
 
-/**PARALLAX*/
+ 
+
+/*! PARALLAX */
 
 #parallax{
   min-height: 30rem; /*! USING MIN-HEIGHT IS OK BECAUSE IT DOESNT LIMIT THE WHOLE SECTION MEANING IT DOESNT GET RUINED */
@@ -305,7 +342,6 @@ p{
   align-items: center;
 }
 
-/** PARALLAX */
 /*! USING CHAT GPT */
 /*? what is ::before and what does it do?*/
 
@@ -329,31 +365,34 @@ p{
   color: var(--color);
   position: relative;
   z-index: 2;
+  
+    &.parallax-text h3 {
+      font-size: var(--fontsizeTitle);
+      padding: var(--sectionPad);
+    }
+    
+    &.parallax-text p{
+      text-align: center;
+      padding: var(--paddingText);
+      opacity: var(--opacity);
+    }
+    
+    &.parallax-text button{
+      cursor: pointer;
+      margin: 2rem;
+      padding: 1rem 3rem;
+      background-color: transparent;
+      font-size: var(--fontsizeText);
+      color: var(--color);
+      border-radius: 0.5rem;
+    }
 }
+  
+/*! PARALLAX DONE */ 
 
-.parallax-text h3 {
-  font-size: 2rem;
-  padding: var(--sectionPad);
-}
 
-.parallax-text p{
-  text-align: center;
-  padding: 0 15rem;
-}
 
-.parallax-text button{
-  cursor: pointer;
-  margin: 2rem;
-  padding: 1rem 3rem;
-  background-color: transparent;
-  font-size: var(--fontsizeText);
-  color: var(--color);
-  border-radius: 0.5rem;
-}
-
-/** PARALLAX DONE */ 
-
-/** SPONSORS */
+/*! SPONSORS */
 
 #sponsors{
   min-height: 40rem;
@@ -367,37 +406,38 @@ p{
   font-size: 1.5rem;
 /*? how to make it align in the center without using margin left */
 /*! The answer is just make the padding 0 on top and bottom and whatever rem you want on the sides thus aligning the text in the center, if you use this method you dont have to use max width or whatever else */
-}
 
-.sponsors-text h2{
-  padding: 25px;
-}
-.sponsors-text p{
-  opacity: var(--opacity);
-  padding: 0 15rem;
-}
+  &.sponsors-text h2{
+    padding: 25px;
+  }
 
+  &.sponsors-text p{
+    opacity: var(--opacity);
+    padding: 0 15rem;
+  }
+
+}
 .sponsor-link{
   padding-top: var(--sectionPad);
   display: flex;
   flex: 1 1 25%;
   /* align-items: center;
   justify-content: center; */
+  
+  &.sponsor-link a{
+    padding: 2rem 0;
+    
+  }
+  
+  &.sponsor-link img{
+    width: 75%;
+    opacity: 50%;
+    border-radius: 50%;
+  }
 }
+/*! SPONSORS DONE */ 
 
-.sponsor-link a{
-  padding: 2rem 0;
-
-}
-
-.sponsor-link img{
-  width: 75%;
-  opacity: 50%;
-  border-radius: 50%;
-}
-/** SPONSORS DONE */ 
-
-/** PRICING */
+/*! PRICING */
 
 #pricing{
   min-height:40rem; 
@@ -414,24 +454,25 @@ p{
 .pricing-subtext{
   /* padding: 2rem;
   margin-left: 5rem; */ /*! use it in container*/
-}
+  &.pricing-subtext h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
 
-.pricing-subtext h2{
-  padding-bottom: 2rem;
+  &.pricing-subtext p{
+    font;
+    width: 75%;
+    opacity: var(--opacity);
+  }
 }
-
-.pricing-subtext p{
-  width: 75%;
-  opacity: var(--opacity);
-}
-
 .creativity{
   padding: var(--sectionPad);
   width: 50%;
-}
-.creativity img{
-  width: 100%;
-  padding: 2rem;
+
+  &.creativity img{
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 
@@ -454,13 +495,116 @@ p{
 
 #pricing button{
   padding: 1rem 2.5rem;
-  background-color: #1294b8;
-  font-size: 1.2rem;
+  background-color: #8DB2FA;
+  font-size: var(--fontsizeText );
   color: var(--color);
   border-radius: 0.5rem;
+  border: none;
+}
+
+/** PRICING DONE */
+
+
+/** PRICING CARDS */
+
+.pri-body{
+  min-height: 20rem;
+  width: 50%;
+  word-spacing: 10rem;
 }
 
 
+
+/** PRICING CARDS*/
+
+
+/** BLOG */
+
+#blogs{
+  min-height: 40rem;
+  background: #d7d8dc;
+}
+
+.blog-title{
+  text-align: center;
+  padding: 5rem 2rem;
+  
+  &.blog-title h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
+  &.blog-title p{
+    padding: var(--paddingText);
+    opacity: var(--opacity);
+    font-size: var(--fontsizeText);
+  }
+}
+
+
+.blog-container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.blog {
+  width: 33%;
+  padding: var(--sectionPad);
+  
+}
+
+.blog-header{
+  position: relative;
+  overflow: hidden;
+
+}
+
+.blog-header img {  
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.effect{
+  gap: 2rem;
+  font-size: var(--fontsizeText);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+  color: var(--color);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  
+    &.effect i{
+      margin: 0.5rem 1rem;
+    }
+}
+
+
+.effect:hover{
+  opacity: 1;
+}
+
+.blog-text{
+
+  &.blog-text h3{
+    padding: 1rem 0;
+    font-size: var;
+  }
+  
+  &.blog-text p{
+    opacity: var(--opacity);
+    padding-bottom: 1rem;
+  }
+}
+
+.blog a{
+  text-decoration: none;
+  color: #1294b8;
+  font-size: 1.2rem;
+    
+}
 /*  
 #team{
   display: flex;

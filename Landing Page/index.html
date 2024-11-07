@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style></style>
-    <link rel="stylesheet" href="css/styles.css"> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/styles.css">  <!--MAKE SURE THAT THE CSS IS THE LAST ONE BECAUSE THE LAST ONE IS THE MOST IMPORTANT -->
     <title>Document</title>
   </head>
   <body>
@@ -117,7 +117,7 @@
       <section id="team">
 
         <div class="team-title">
-          <h1>We're dynamic team of talented people of innovative & marketing experts</h1>
+          <h2>We're dynamic team of talented people of innovative & marketing experts</h2> <!-- changed h1 to h2-->
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sed soluta aut maiores. Quidem nisi ut dolor, dicta odit qui aut modi, dolorem fuga est laudantium quas iusto minus in!</p>
         </div>
 
@@ -285,59 +285,126 @@
             <p>It is long estalished fact that a reader wil be of a page when established fact loking at its layout</p>
           </div>
 
-          
+          <div class="pri-container">
+
+            <div class="pri-card">
+              <div class="pri-header">
+                <h3>Starter</h3>
+                <p>$<span>9</span>/<span>month</span></p> <!--By using span youre able to decorate them, span isnt like div meaning its not a box element but an inline element-->
+              </div>
+
+              <div class="pri-body">
+                <p>TESTETSETSETS TEST</p>
+                <p>TESTssdTSsaETS TESTES</p>
+              </div>
+
+
+
+
+
+            </div>
+
+
+
+          </div>
           
         </section>
 
-        <section class="blog">
-            <h2 class="title">Our Blog</h2>
-            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis veritatis at optio. Eum odio omnis tempora </p>
-            <div class="blog-header">
-                <img src="img/blog1.png" alt="blog 1" />
+        <section id="blogs">
+
+            <div class="blog-title">
+              <h2 class="title">Our Blog</h2>
+              <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis veritatis at optio. Eum odio omnis tempora </p>
             </div>
+            
+            <div class="blog-container">
+
+            <div class="blog">
+              <div class="blog-header">
+                  <img src="img/blog1.png" alt="blog 1"/>
+                  <div class="effect">
+                    <div class="name">
+                      <i class="fa-regular fa-user"></i><span>Calvin Carlo</span>
+                    </div>
+                    <div class="time">
+                      <i class="fa-regular fa-clock"></i><span>20th March 2021<span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="blog-text"> 
+                  <h3 class="sub-title">Doing a cross country road trip</h3>
+                  <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
+                  cum eligendi dolorum accusantium maxime voluptate omnis fuga
+                  tempora nostrum dolores voluptatum ullam minima ducimus, officiis
+                  iusto impedit voluptas iure.
+                  </p>
+              </div>
+              <a href="">Read more</a>
+            </div>
+          
+          <div class="blog">  
+            <div class="blog-header">
+              <img src="img/blog2.png" alt="blog 2"/>
+              <div class="effect">
+                <div class="name">
+                  <i class="fa-regular fa-user"></i><span>Theresa Sinclair</span>
+                </div>
+                <div class="time">
+                  <i class="fa-regular fa-clock"></i><span>25th July 2021</span>
+                </div>
+              </div>
+            </div>
+
             <div class="blog-text">
-                <h3 class="sub-title">Doing a cross country road trip</h3>
-                <p>
+              <h3 class="sub-title">New exihibition at our Museum</h3>
+              <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
                 cum eligendi dolorum accusantium maxime voluptate omnis fuga
                 tempora nostrum dolores voluptatum ullam minima ducimus, officiis
                 iusto impedit voluptas iure.
-                </p>
+              </p>
             </div>
-          <a href="">Read more</a>
-          <div class="blog-header">
-            <img src="img/blog2.png" alt="blog 2" />
+            <a href="">Read more</a>
           </div>
-          <div class="blog-text">
-            <h3 class="sub-title">New exihibition at our Museum</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
-              cum eligendi dolorum accusantium maxime voluptate omnis fuga
-              tempora nostrum dolores voluptatum ullam minima ducimus, officiis
-              iusto impedit voluptas iure.
-            </p>
+
+          <div class="blog">
+            <div class="blog-header">
+              <img src="img/blog3.png" alt="blog 3"/>
+              <div class="effect">
+                <div class="name">
+                  <i class="fa-regular fa-user"></i><span>John Brickster</span>
+                </div>
+                <div class="time">
+                  <i class="fa-regular fa-clock"></i><span>2nd April 2021</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-text">
+              <h3 class="sub-title">Design your apps in your own way</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
+                cum eligendi dolorum accusantium maxime voluptate omnis fuga
+                tempora nostrum dolores voluptatum ullam minima ducimus, officiis
+                iusto impedit voluptas iure.
+              </p>
+            </div>
+            <a href="">Read more</a>
           </div>
-          <a href="">Read more</a>
-          <div class="blog-header">
-            <img src="img/blog3.png" alt="blog 3" />
-          </div>
-          <div class="blog-text">
-            <h3 class="sub-title">Design your apps in your own way</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus id
-              cum eligendi dolorum accusantium maxime voluptate omnis fuga
-              tempora nostrum dolores voluptatum ullam minima ducimus, officiis
-              iusto impedit voluptas iure.
-            </p>
-          </div>
-          <a href="">Read more</a>
+
+        </div>
+
         </section>
       </section>
     </main>
     
     <!-- FOOTER -->
     <footer>
+
       <div class="footer-container">
+
         <nav class="footer-nav">
           <ul>
             <li><a href="about.html">About Me</a></li>
@@ -358,7 +425,9 @@
           </a>
           <p>&copy; 2024 Your Name. All rights reserved.</p>
         </div>
+
       </div>
+
     </footer>
   </body>
   

@@ -460,6 +460,7 @@ p{
   }
 
   &.pricing-subtext p{
+
     width: 75%;
     opacity: var(--opacity);
   }

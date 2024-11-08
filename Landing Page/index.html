@@ -278,37 +278,152 @@
         </figure>
       </section>
 
-        <section class="pricing-cards">
+      <section id="pricing-cards">
 
-          <div class="pri-cards-t">
-            <h2>Our Pricing</h2>
-            <p>It is long estalished fact that a reader wil be of a page when established fact loking at its layout</p>
-          </div>
+        <div class="pri-cards-t">
+          <h2>Our Pricing</h2>
+          <p>It is long estalished fact that a reader wil be of a page when established fact loking at its layout</p>
+        </div>
 
-          <div class="pri-container">
-
-            <div class="pri-card">
-              <div class="pri-header">
-                <h3>Starter</h3>
-                <p>$<span>9</span>/<span>month</span></p> <!--By using span youre able to decorate them, span isnt like div meaning its not a box element but an inline element-->
-              </div>
-
-              <div class="pri-body">
-                <p>TESTETSETSETS TEST</p>
-                <p>TESTssdTSsaETS TESTES</p>
-              </div>
-
-
-
-
-
-            </div>
-
-
-
+        <div class="pri-container">
+          <!--Starting plan -->
+          <div class="pri-card">
+            <h3>Starter</h3>
+            <p class="price">$9<span>/ month</span></p>
+            <ul> <!--CHAT GPT IDEA OF USING UL AND SPAN-->
+              <li> <!-- THE LIST LETS US IMPROVE AND ORGANISE THE CARD BETTER BECAUSE 1 IT IS IN FACT A LIST OF FEATURES AND 2 BECAUSE ITS EASIER TO USE CSS, CAN YOU DO IT WITHOUT THE LIST? YES BUT I WOULD HAVE TO CHECK AND REDO IT WHICH IS POINTLESS IF I  CAN JUST REREAD ALL OF THIS, AND REMEMBER USE GPT TO EITHER REREAD THE CODE 30TIMES AND UNDERSTAND OR USE IT TO JUST DONT WASTE TIME BECAUSE DOING SAME STUFF IS ANNOYING, DO NOT BE ASHAMED OF USING GTP BE ASHAMED OF COPING IT-->
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bandwidth</span>
+                </div>
+                <b>1GB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Online Space</span>
+                </div>
+                <b>500MB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Support</span>
+                </div>
+                <b>NO</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Domains</span>
+                </div>
+                <b>1</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Hidden Fees</span>
+                </div>
+                <b>NO</b>
+            </ul>
+            <button>Join Now</button> 
           </div>
           
-        </section>
+          <div class="pri-card">
+            <span class="badge">20% sale</span> <!-- ADDS A BADGE SALE TO THE CARD-->
+            <h3>Advanced</h3>
+            <p class="price">$19<span>/ month</span></p>
+            <ul> <!--CHAT GPT IDEA OF USING UL AND SPAN-->
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bandwidth</span>
+                </div>
+                <b>5GB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Online Space</span>
+                </div>
+                <b>3GB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Support</span>
+                </div>
+                <b>YES</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Domains</span>
+                </div>
+                <b>3</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Hidden Fees</span>
+                </div>
+                <b>NO</b>
+            </ul>
+            <button>Join Now</button>
+          </div>
+
+          <div class="pri-card">
+            <h3>Professional</h3>
+            <p class="price">$29<span>/ month</span></p>
+            <ul> <!--CHAT GPT IDEA OF USING UL AND SPAN-->
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bandwidth</span>
+                </div>
+                <b>10GB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Online Space</span>
+                </div>
+                <b>5GB</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Support</span>
+                </div>
+                <b>YES</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Domains</span>
+                </div>
+                <b>Unlimited</b>
+              </li>
+              <li>
+                <div class="feature-label">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Hidden Fees</span>
+                </div>
+                <b>NO</b>
+            </ul>
+            <button>Join Now</button>
+          </div>
+          
+
+
+
+          </div>
+
+
+
+        </div>
+        
+      </section>
 
         <section id="blogs">
 
@@ -401,33 +516,25 @@
     </main>
     
     <!-- FOOTER -->
-    <footer>
-
+    <footer id="footer">
       <div class="footer-container">
 
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="social-links">
-          <a href="https://facebook.com" target="_blank">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="footer-icons">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
         </div>
 
-      </div>
+        <div class="footer-links"> <!-- USED CHAT GPT TO NOT WASTE TIME. CARE-->
+          <a href="#">Terms & Condition |</a> &nbsp;
+          <a href="#">Privacy Policy |</a>&nbsp; <!-- &nbsp; adds white space, maybe not the best solutiom-->
+          <a href="#">Contact Us</a>
+        </div>
 
+        <p>2022 © Kucra - Landing Page Template by Pichforest</p>
+
+      </div>
     </footer>
   </body>
   
@@ -435,7 +542,6 @@
 
 
 
-  
   <!-- <section id="team">
     <div class="title-team">
       <h2>

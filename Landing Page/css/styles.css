@@ -8,6 +8,7 @@
   --subtitle:4rem;
   --sectionPad: 2rem;
   --paddingText: 0 15rem;
+  --paddingDir: 1rem;
   /* --sectionHei: 40rem; */ /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
   --gap:5rem;
   --opacity: 60%;
@@ -84,14 +85,14 @@ p{
 }
 
 .searchbar h1{
-  padding-bottom: 1rem;
+  padding-bottom: var(--paddingDir);
   font-size: 5rem;
   line-height: 1.2;
 }
 
 .searchbar p{
   flex-wrap: wrap;
-  padding-top: 1rem;
+  padding-top: var(--paddingDir);
   padding-bottom: 2rem;
   font-size: 1.8rem;
   line-height: 1.2;
@@ -119,7 +120,7 @@ p{
 
 .searchbar form input{
   font-size: var(--fontsizeText);
-  padding-left: 1rem;
+  padding-left: var(--paddingDir);
   padding-right: 5rem;
   outline: none;
   border: none;
@@ -129,7 +130,7 @@ p{
 
 .searchbar form button{
   cursor: pointer;
-  padding: 1rem;
+  padding: var(--paddingDir);
   font-size: 1rem ;
   color:var(--color);
   text-transform: uppercase;
@@ -168,7 +169,7 @@ p{
 
   &.cards-title h2{
     font-size: var(--fontsizeTitle);
-    padding-bottom: 1rem;
+    padding-bottom: var(--paddingDir);
   }
 
   &.cards-title p{
@@ -194,7 +195,7 @@ p{
 }
 
 .card-header, .card-header i{
-  padding: 1rem;
+  padding: var(--paddingDir);
   font-size: 5rem;
   color: var(--color);
   text-align: center;
@@ -205,7 +206,7 @@ p{
   text-align: center;
 
     &.card-text h2{
-      padding-bottom: 1rem;
+      padding-bottom: var(--paddingDir);
     }
 
     &.card-text p{
@@ -242,7 +243,7 @@ p{
     
 
   &.team-title h2{
-    padding-bottom: 1rem;
+    padding-bottom: var(--paddingDir);
     font-size: var(--fontsizeTitle);
   }
   &.team-title p{
@@ -260,7 +261,7 @@ p{
 }
 
 .team-subtitle, .team-description{
-  padding: 1rem; 
+  padding: var(--paddingDir); 
 }
 
 .team-card{
@@ -302,7 +303,7 @@ p{
 
 .socials a{
   gap: 1rem;
-  padding: 1rem;
+  padding: var(--paddingDir);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -448,14 +449,14 @@ p{
 .pricing-text{
   padding: var(--sectionPad);
   width: 50%;
-  padding-bottom: 1rem;
+  padding-bottom: var(--paddingDir);
   padding-left: 7rem; /*! By using this i dont have to give each element padding and margin, why i didnt think of it earlier?*/
 }
 .pricing-subtext{
   /* padding: 2rem;
   margin-left: 5rem; */ /*! use it in container*/
   &.pricing-subtext h2{
-    padding-bottom: 1rem;
+    padding-bottom: var(--paddingDir);
     font-size: var(--fontsizeTitle);
   }
 
@@ -506,11 +507,102 @@ p{
 
 
 /** PRICING CARDS */
+#pricing-cards{
+  min-height: 40rem;
+  background: #f5f5f5; ! COLOR FOUND USING CHAT GPT 
+}
 
-.pri-body{
-  min-height: 20rem;
-  width: 50%;
-  word-spacing: 10rem;
+.pri-cards-t{
+  text-align: center;
+  padding: var(--sectionPad);
+  color: black;
+
+  & h2{
+    font-size: var(--fontsizeTitle);
+    padding-bottom: var(--paddingDir)
+  }
+
+  & p{
+    font-size: var(--fontsizeText);
+    padding: var(--paddingText);
+    opacity: var(--opacity);
+  }
+  
+}
+.pri-container{
+  display: flex;
+
+  justify-content: center;
+  padding: var(--sectionPad);
+  gap: 10rem;
+
+  & .pri-card{
+    background-color: var(--color);
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 33%;
+    padding: var(--sectionPad);
+    position: relative;
+    text-align: left;
+
+    & h3{
+      text-align: center;
+      padding: var(--paddingDir);
+    }
+
+    & .price , .span{
+        font-size: var(--fontsizeText);
+        color: #888;
+        text-align: center;
+        padding-bottom: var(--paddingDir);
+    }
+
+
+    & ul{
+      list-style: none;
+      padding-bottom: var(--paddingDir);
+      
+      & li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--paddingDir);
+        
+      }
+    }
+  }
+  
+  & button{
+    cursor: pointer;
+    width: 100%; /*! SINCE THIS HAS WIDTH OF 100 AND OUR CARD HAS PADDING ITS GOOD, DO NOT USE PADDING OR ANYTHING TO MAKE IT FLOAT TO THE CENTER AS ITS ALREADY DOING THAT*/
+    color: var(--color);
+    background-color: #1294b8;  
+    border: none;
+    border-radius: 2rem;
+    padding: var(--paddingDir);
+    font-size: var(--fontsizeText);
+    font: bolder;
+    
+  }
+  
+  /*! DONE WITH THE HELP OF GPT, BECAUSE YOU HAVE A DIV WITH ICON AND THE SPAN IT IS GROUPED TOGETHER AND WITHOUT ADDING A GAP OR SOME THING YOU WILL HAVE THEM RIGHT NEXT TO EACH OTHER, THIS IS WHAT YOU WANT BECAUSE BUT DOING SO YOU SEPARATE THOSE 2 FROM THE B WHICH IS OUR VALUE, IF YOU DONT UNDERSTAND IT WELL DRAW IT THERES A BIG BOX CONTAINER AND TWO 'LITTLE BOXES' OUR CONTAINER IS OUR LI THING*/ 
+  .feature-label{ 
+    display: flex;
+    align-items: center;
+    
+    & i{
+      color: green; /* Color for checkmark icon */
+      margin-right: 5px;
+        
+    }
+    & i.fa-times-circle{
+      color: rgb(139, 0, 0);
+    }
+  }
+}
+
+.pri-card button:hover{
+ opacity: var(--opacity);
 }
 
 
@@ -529,11 +621,11 @@ p{
   text-align: center;
   padding: 5rem 2rem;
   
-  &.blog-title h2{
-    padding-bottom: 1rem;
+  & h2{
+    padding-bottom: var(--paddingDir);
     font-size: var(--fontsizeTitle);
   }
-  &.blog-title p{
+  & p{
     padding: var(--paddingText);
     opacity: var(--opacity);
     font-size: var(--fontsizeText);
@@ -555,7 +647,7 @@ p{
 .blog-header{
   position: relative;
   overflow: hidden;
-
+  
 }
 
 .blog-header img {  
@@ -576,9 +668,9 @@ p{
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   
-    &.effect i{
-      margin: 0.5rem 1rem;
-    }
+  &.effect i{
+    margin: 0.5rem 1rem;
+  }
 }
 
 
@@ -587,7 +679,7 @@ p{
 }
 
 .blog-text{
-
+  
   &.blog-text h3{
     padding: 1rem 0;
     font-size: var;
@@ -595,7 +687,7 @@ p{
   
   &.blog-text p{
     opacity: var(--opacity);
-    padding-bottom: 1rem;
+    padding-bottom: var(--paddingDir);
   }
 }
 
@@ -603,17 +695,60 @@ p{
   text-decoration: none;
   color: #1294b8;
   font-size: 1.2rem;
-    
+  
 }
 
 
 /*! BLOG DONE */
 
 
-/*! NAV */
+/*! FOOTER */
+#footer{
+  background-color: #2c2c2c; /*! COLOR FOUND USING CHAT GPT*/
+  
+  & a{
+    text-decoration: none;
+    color: #bdbdbd;
+    padding-bottom: var(--sectionPad);
+  }
+  
+  & p{
+    color: #bdbdbd;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  
+  .footer-icons{
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    
+    
+    & i{ /*! YOU DONT NEED TO REPEAT &.FOOTER-ICONS U JUST NEED & "SPACE" I OR WAHTEVER U NEED TO WORK ON*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.1rem solid #bdbdbd; 
+      border-radius: 50%;
+      width: 0.1rem;  /*! BY GIVING THE ICON WIDTH AND HEIGHT IT MAKES THE CIRCLE BE EVEN*/
+      height: 0.1rem;
+      padding: 2rem;
+      font-size: 1.5rem;
+      color: #bdbdbd; /*! COLOR FOUND USING CHAT GPT*/
+    }
+  }
 
+  .footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
+    
+  }
+}
 
 
 

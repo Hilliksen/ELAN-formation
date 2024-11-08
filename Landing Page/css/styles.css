@@ -1,44 +1,73 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{ /*! Root allows u to make one thing ver specific to every thing so its easier to update/change */ 
   --titleColor: green;
   --radicalGradient:  radial-gradient(rgb(139, 196, 245),#1294b8);
+<<<<<<< HEAD
   --textColor: white;
+=======
+  --color: white;
+>>>>>>> 673c19d4f3a9e6b4f2ef53ea6ea696667b7e7622
   --fontsizeText:1.5rem;
+  --fontsizeTitle:2.5rem;
   --subtitle:4rem;
+  --sectionPad: 2rem;
+  --paddingText: 0 15rem;
+  /* --sectionHei: 40rem; */ /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
+  --gap:5rem;
+  --opacity: 60%;
+  --transition: 0.7s;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
+} /*! always usse this above */
+
+body {  /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ 
+  background-image: var(--radicalGradient);
 }
 
-body {
-  font-family: "Poppins";
-  background-image: radial-gradient(rgb(139, 196, 245),#1294b8);
+p{
+  line-height: 22px;
 }
+
+
+
+/*! dont really use this as its too general, imagine u have more than 1 page
+p{
+  opacity: 60%;
+} */
+
+
+/*! NAV */
 
 .first-nav {
-  padding: 2rem;
+  padding: var(--sectionPad);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-}
+  
+    &.first-nav h2 {
+    font-size: var(--subtitle);
+    font-weight: 700;
+      color: var(--color);
+    }
+    
+    &.first-nav ul {
+      list-style: none;
+      font-size: var(--fontsizeText);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-.first-nav h2 {
-  font-size: var(--subtitle);
-  font-weight: 700;
-  color: var(--textColor);
-}
-
-.first-nav ul {
-  list-style: none;
-  font-size: var(--fontsizeText);
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-.first-nav ul li a {
-  color: var(--textColor);
-  text-decoration: none;
+    &.first-nav ul li a {
+      color: var(--color);
+      text-decoration: none;
+    }
 }
 
 .main-nav{
@@ -56,7 +85,7 @@ body {
 
 #search {
   display: flex;
-  padding: 2rem;
+  padding: var(--sectionPad);
 }
 
 .searchbar{
@@ -68,9 +97,13 @@ body {
   padding-bottom: 1rem;
   font-size: 5rem;
   line-height: 1.2;
-  }
+}
 
 .searchbar p{
+<<<<<<< HEAD
+=======
+  flex-wrap: wrap;
+>>>>>>> 673c19d4f3a9e6b4f2ef53ea6ea696667b7e7622
   padding-top: 1rem;
   padding-bottom: 2rem;
   font-size: 1.8rem;
@@ -111,7 +144,7 @@ body {
   cursor: pointer;
   padding: 1rem;
   font-size: 1rem ;
-  color: white;
+  color:var(--color);
   text-transform: uppercase;
   font-weight: 700;
   background-color:cornflowerblue;
@@ -131,13 +164,80 @@ body {
   box-shadow:0 1.5px #666;
   transform: translateY(2px);
 } 
+<<<<<<< HEAD
 /*NAV DONE*/
  #cards{
   min-height: 40rem;
   background: #ffffff;
+=======
+/*!NAV DONE*/
+
+
+/*!CARDS */
+
+#cards{
+  min-height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
+  background: var(--color);
+}
+
+
+.cards-title{
+  text-align: center;
+  padding: var(--sectionPad);
+
+  &.cards-title h2{
+    font-size: var(--fontsizeTitle);
+    padding-bottom: 1rem;
+  }
+
+  &.cards-title p{
+    opacity: var(--opacity);
+    padding: var(--paddingText);
+  } /*! NEW VAR FOR PADDING P,  ALSO USED NEW TECHNIQUE CALLED NESTING  */
+}
+
+.container{
+  padding: var(--sectionPad);
+  display: flex;    /* ! put the display flex in here the container of cards instead of the id cards thus making the title and p ablet to get well placed */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.card{
+  background: var(--radicalGradient);
+  padding: var(--sectionPad);
+  border-radius: 1rem;
+  flex: 1 1 25%; /**FLEX lets u something check out later*/ 
+}
+
+.card-header, .card-header i{
+  padding: 1rem;
+  font-size: 5rem;
+  color: var(--color);
+  text-align: center;
+}
+
+.card-text{
+  color: var(--color);
+  text-align: center;
+
+    &.card-text h2{
+      padding-bottom: 1rem;
+    }
+
+    &.card-text p{
+      opacity: var(--opacity);
+    }
+
+}
+/* .cards-title{
+>>>>>>> 673c19d4f3a9e6b4f2ef53ea6ea696667b7e7622
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: center;
+<<<<<<< HEAD
  }
 
 
@@ -167,3 +267,435 @@ body {
 } 
 
 
+=======
+  margin: 10rem;
+} */
+
+/*! CARDS DONE */
+
+
+
+/*! CARDS-TEAM */
+
+#team{
+  height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
+  padding: var(--sectionPad);
+  background: var(--color);
+
+   &#team p{
+      opacity: 50%;
+   } /*! ADDED */ 
+} 
+
+.team-title{
+  text-align: center;
+  padding: var(--sectionPad);
+    
+
+  &.team-title h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
+  &.team-title p{
+    padding: var(--paddingText);
+  }/*! ADDED */ 
+}
+
+.team-container{
+  padding: var(--sectionPad);
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap); 
+}
+
+.team-subtitle, .team-description{
+  padding: 1rem; 
+}
+
+.team-card{
+  text-align: center;
+
+}
+
+/* this is TOO much  .team-title p, .team-card p  check if this is specific enough if not try with p class */
+
+
+.team-pic{
+  
+  position: relative;
+  overflow: hidden;  /**Hides everything that will not be visible to the user but its still there*/
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; 
+}
+/*! width: 250px; border-radius: 50%; ALL OF THIS SHOULDVE BEEN IN THE CONTAINER TO CHANGE THE SIZE OF CONTAINER NOT TO CHANGE THE PIC*/
+
+.team-pic img{ /*! You must used "img" to alter it in anyway*/
+  filter: grayscale(1); /** Changes color to gray, 1 means the f*/
+  transition:var(--transition) ; /**How fast it changes*/
+  /* transition: transform 0.3s ease; */
+  height: 100%;
+}
+
+.socials{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  transition: var(--transition); /**Goes back slower*/
+}
+
+.socials a{
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.team-pic:hover img{
+  filter: grayscale(0);
+  transition: var(--transition);
+  transform: scale(1.1);
+}
+
+.team-pic:hover .socials{
+  left: 0px;
+  top: 70px;
+  transition: var(--transition);
+  
+}
+
+/*! CARDS TEAM DONE */
+
+ 
+
+/*! PARALLAX */
+
+#parallax{
+  min-height: 30rem; /*! USING MIN-HEIGHT IS OK BECAUSE IT DOESNT LIMIT THE WHOLE SECTION MEANING IT DOESNT GET RUINED */
+  background: url("../img/parallax.png") ;
+  background-attachment: fixed;
+  position: relative; /*! USING CHAT GPT */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+/*! USING CHAT GPT */
+/*? what is ::before and what does it do?*/
+
+/* h1::before {
+  content: "Prefix - ";  /* Adds the prefix before the actual heading /
+  color: red;
+} */
+
+/*! the ::before is a layer that goes before the element, not sure yet */
+#parallax::before {
+  content: "";  /* Necessary to make the pseudo-element work */
+  position: absolute;  /* Position it on top of the background */
+  top: 0; left: 0;  /* Cover the whole container */
+  width: 100%; height: 100%;  /* Cover the full height and width */
+  background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay with opacity */
+  z-index: 1;  /* Make sure it's behind the text */
+}
+/*! CHATGPT DONE */
+.parallax-text{
+  text-align: center;
+  color: var(--color);
+  position: relative;
+  z-index: 2;
+  
+    &.parallax-text h3 {
+      font-size: var(--fontsizeTitle);
+      padding: var(--sectionPad);
+    }
+    
+    &.parallax-text p{
+      text-align: center;
+      padding: var(--paddingText);
+      opacity: var(--opacity);
+    }
+    
+    &.parallax-text button{
+      cursor: pointer;
+      margin: 2rem;
+      padding: 1rem 3rem;
+      background-color: transparent;
+      font-size: var(--fontsizeText);
+      color: var(--color);
+      border-radius: 0.5rem;
+    }
+}
+  
+/*! PARALLAX DONE */ 
+
+
+
+/*! SPONSORS */
+
+#sponsors{
+  min-height: 40rem;
+  background: var(--color) ;
+  padding: var(--sectionPad);
+}
+
+.sponsors-text{
+  text-align: center;
+  padding: 5rem 2rem;
+  font-size: 1.5rem;
+/*? how to make it align in the center without using margin left */
+/*! The answer is just make the padding 0 on top and bottom and whatever rem you want on the sides thus aligning the text in the center, if you use this method you dont have to use max width or whatever else */
+
+  &.sponsors-text h2{
+    padding: 25px;
+  }
+
+  &.sponsors-text p{
+    opacity: var(--opacity);
+    padding: 0 15rem;
+  }
+
+}
+.sponsor-link{
+  padding-top: var(--sectionPad);
+  display: flex;
+  flex: 1 1 25%;
+  /* align-items: center;
+  justify-content: center; */
+  
+  &.sponsor-link a{
+    padding: 2rem 0;
+    
+  }
+  
+  &.sponsor-link img{
+    width: 75%;
+    opacity: 50%;
+    border-radius: 50%;
+  }
+}
+/*! SPONSORS DONE */ 
+
+/*! PRICING */
+
+#pricing{
+  min-height:40rem; 
+  background: var(--color);
+  padding: var(--sectionPad);
+  display: flex;
+}
+.pricing-text{
+  padding: var(--sectionPad);
+  width: 50%;
+  padding-bottom: 1rem;
+  padding-left: 7rem; /*! By using this i dont have to give each element padding and margin, why i didnt think of it earlier?*/
+}
+.pricing-subtext{
+  /* padding: 2rem;
+  margin-left: 5rem; */ /*! use it in container*/
+  &.pricing-subtext h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
+
+  &.pricing-subtext p{
+    font;
+    width: 75%;
+    opacity: var(--opacity);
+  }
+}
+.creativity{
+  padding: var(--sectionPad);
+  width: 50%;
+
+  &.creativity img{
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+
+.happy{  /*! USING NESTING */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: var(--sectionPad) 0;
+    
+    &.happy h3{
+      font-size: var(--fontsizeText);
+    }
+
+    &.happy p{
+      opacity: var(--opacity);
+    }
+
+}
+
+
+#pricing button{
+  padding: 1rem 2.5rem;
+  background-color: #8DB2FA;
+  font-size: var(--fontsizeText );
+  color: var(--color);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/** PRICING DONE */
+
+
+/** PRICING CARDS */
+
+.pri-body{
+  min-height: 20rem;
+  width: 50%;
+  word-spacing: 10rem;
+}
+
+
+
+/** PRICING CARDS*/
+
+
+/** BLOG */
+
+#blogs{
+  min-height: 40rem;
+  background: #d7d8dc;
+}
+
+.blog-title{
+  text-align: center;
+  padding: 5rem 2rem;
+  
+  &.blog-title h2{
+    padding-bottom: 1rem;
+    font-size: var(--fontsizeTitle);
+  }
+  &.blog-title p{
+    padding: var(--paddingText);
+    opacity: var(--opacity);
+    font-size: var(--fontsizeText);
+  }
+}
+
+
+.blog-container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.blog {
+  width: 33%;
+  padding: var(--sectionPad);
+  
+}
+
+.blog-header{
+  position: relative;
+  overflow: hidden;
+
+}
+
+.blog-header img {  
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.effect{
+  gap: 2rem;
+  font-size: var(--fontsizeText);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+  color: var(--color);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  
+    &.effect i{
+      margin: 0.5rem 1rem;
+    }
+}
+
+
+.effect:hover{
+  opacity: 1;
+}
+
+.blog-text{
+
+  &.blog-text h3{
+    padding: 1rem 0;
+    font-size: var;
+  }
+  
+  &.blog-text p{
+    opacity: var(--opacity);
+    padding-bottom: 1rem;
+  }
+}
+
+.blog a{
+  text-decoration: none;
+  color: #1294b8;
+  font-size: 1.2rem;
+    
+}
+
+/*! NAVBAR*/
+
+
+/*  
+#team{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40rem;
+  background: red;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  gap: 3rem;
+}
+.sub-title{
+  text-align: center;
+}
+.team-pic{
+  padding: 2rem;
+  height: 250px;
+
+}
+.team-pic img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  filter: grayscale(1);
+  transition: 0.7s;
+
+}
+
+.team-pic img:hover{
+  filter: grayscale(0);
+  transition: 0.7;
+}
+
+.name-team{
+  text-align: center;
+} */
+>>>>>>> 673c19d4f3a9e6b4f2ef53ea6ea696667b7e7622

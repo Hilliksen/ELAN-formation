@@ -324,7 +324,7 @@ p{
   
 }
 
-/*! CARDS TEAM DONE */
+/*! CARDS TEAM DONE    */
 
  
 
@@ -460,7 +460,6 @@ p{
   }
 
   &.pricing-subtext p{
-    font;
     width: 75%;
     opacity: var(--opacity);
   }
@@ -605,6 +604,20 @@ p{
   font-size: 1.2rem;
     
 }
+
+
+/*! BLOG DONE */
+
+
+/*! NAV */
+
+
+
+
+
+
+
+
 /*  
 #team{
   display: flex;

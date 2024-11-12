@@ -398,7 +398,6 @@ p{
 /*! ===============================SPONSORS=============================== */
 
 #sponsors{
-  min-height: 40rem;
   background: var(--color) ;
   padding: var(--sectionPad);
 }
@@ -442,8 +441,7 @@ p{
 
 /*! ===============================PRICING=============================== */
 
-#pricing{
-  min-height:40rem; 
+#pricing{ 
   background: var(--color);
   padding: var(--sectionPad);
   display: flex;
@@ -505,10 +503,10 @@ p{
   border: none;
 }
 
-/** PRICING DONE */
+/*! ===============================PRICING DONE=============================== */
 
 
-/** PRICING CARDS */
+/*!=============================== PRICING CARDS=============================== */
 #pricing-cards{
   min-height: 40rem;
   background: #f5f5f5; ! COLOR FOUND USING CHAT GPT 
@@ -605,13 +603,27 @@ p{
 .pri-card button:hover{
  opacity: var(--opacity);
 }
+.pricing-card.featured {
+  border: 2px solid #5a73ff;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #5a73ff;
+  color: white;
+  font-size: var(--fontsizeText);
+  padding: 20px 20px 20px 20px;
+  border-radius: 1rem;
+  text-align: center;
+}
 
 
+/*! PRICING CARDS*/
 
-/** PRICING CARDS*/
 
-
-/** BLOG */
+/*! BLOG */
 
 #blogs{
   min-height: 40rem;
@@ -907,7 +919,91 @@ p{
         margin: 20px 0 0 0 ;
         font-size: 0.5rem;
       }
+    }
 
+    #sponsors{
+         
+      & h2{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
 
+      .sponsors-text{
+        padding: 20px 20px 20px 0;
+      }
+
+      .sponsor-link{
+        padding: 0;
+      }
+    }
+
+    #pricing{
+         
+      & h2, h3{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
+
+      .pricing-text{
+        padding: 0;
+      }
+
+      .creativity {
+        padding: 0;
+      }
+
+      .happy{
+        padding: 20px;
+      }
+
+      & button{
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+
+    .pri-cards-t{
+         
+      & h2{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
+    }
+
+    #blogs{
+         
+      & h2, h3{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p, a{
+        padding: 0.1rem;
+        font-size: 0.5rem;
+      }
+
+      .blog-title{
+        padding: 50px;
+      }
+
+      & i,span{
+        padding: 0.1rem;
+        font-size: 0.5rem;
+      }
     }
   }

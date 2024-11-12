@@ -20,6 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+
 } /*! always usse this above */
 
 body {  /*! DO NOT TOUCH THE BODY EXCEPT LIKE THIS */ 
@@ -38,7 +39,7 @@ p{
 } */
 
 
-/*! NAV */
+/*! ===============================NAV=============================== */
 
 .first-nav {
   padding: var(--sectionPad);
@@ -101,7 +102,7 @@ p{
 }
 
 .logo {  
-  width: 60%;
+  width: 70%;
 }
 
 .logo img{
@@ -121,7 +122,7 @@ p{
 .searchbar form input{
   font-size: var(--fontsizeText);
   padding-left: var(--paddingDir);
-  padding-right: 5rem;
+  padding-right: 1rem;
   outline: none;
   border: none;
   background: transparent;
@@ -152,10 +153,10 @@ p{
   box-shadow:0 1.5px #666;
   transform: translateY(2px);
 } 
-/*!NAV DONE*/
+/*!===============================NAV DONE===============================*/
 
 
-/*!CARDS */
+/*!===============================CARDS=============================== */
 
 #cards{
   min-height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
@@ -221,11 +222,11 @@ p{
   margin: 10rem;
 } */
 
-/*! CARDS DONE */
+/*! ===============================CARDS DONE=============================== */
 
 
 
-/*! CARDS-TEAM */
+/*! ===============================CARDS-TEAM=============================== */
 
 #team{
   height: var(--sectionHei); /*! DO NOT USE HEIGHT FOR ANYTHING ELSE THEN IMG FOR NOW*/
@@ -325,11 +326,11 @@ p{
   
 }
 
-/*! CARDS TEAM DONE    */
+/*! ===============================CARDS TEAM DONE===============================    */
 
  
 
-/*! PARALLAX */
+/*! ===============================PARALLAX=============================== */
 
 #parallax{
   min-height: 30rem; /*! USING MIN-HEIGHT IS OK BECAUSE IT DOESNT LIMIT THE WHOLE SECTION MEANING IT DOESNT GET RUINED */
@@ -350,6 +351,7 @@ p{
   content: "Prefix - ";  /* Adds the prefix before the actual heading /
   color: red;
 } */
+
 
 /*! the ::before is a layer that goes before the element, not sure yet */
 #parallax::before {
@@ -389,11 +391,11 @@ p{
     }
 }
   
-/*! PARALLAX DONE */ 
+/*!===============================PARALLAX DONE===============================*/ 
 
 
 
-/*! SPONSORS */
+/*! ===============================SPONSORS=============================== */
 
 #sponsors{
   min-height: 40rem;
@@ -436,9 +438,9 @@ p{
     border-radius: 50%;
   }
 }
-/*! SPONSORS DONE */ 
+/*! ===============================SPONSORS DONE=============================== */ 
 
-/*! PRICING */
+/*! ===============================PRICING=============================== */
 
 #pricing{
   min-height:40rem; 
@@ -531,7 +533,7 @@ p{
 }
 .pri-container{
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: center;
   padding: var(--sectionPad);
   gap: 10rem;
@@ -540,8 +542,8 @@ p{
     background-color: var(--color);
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 33%;
     padding: var(--sectionPad);
+    flex: 1 1 25%;
     position: relative;
     text-align: left;
 
@@ -555,9 +557,8 @@ p{
         color: #888;
         text-align: center;
         padding-bottom: var(--paddingDir);
+
     }
-
-
     & ul{
       list-style: none;
       padding-bottom: var(--paddingDir);
@@ -567,10 +568,12 @@ p{
         justify-content: space-between;
         align-items: center;
         padding: var(--paddingDir);
+        padding-right: var(--paddingDir);
         
       }
     }
   }
+  
   
   & button{
     cursor: pointer;
@@ -587,9 +590,7 @@ p{
   
   /*! DONE WITH THE HELP OF GPT, BECAUSE YOU HAVE A DIV WITH ICON AND THE SPAN IT IS GROUPED TOGETHER AND WITHOUT ADDING A GAP OR SOME THING YOU WILL HAVE THEM RIGHT NEXT TO EACH OTHER, THIS IS WHAT YOU WANT BECAUSE BUT DOING SO YOU SEPARATE THOSE 2 FROM THE B WHICH IS OUR VALUE, IF YOU DONT UNDERSTAND IT WELL DRAW IT THERES A BIG BOX CONTAINER AND TWO 'LITTLE BOXES' OUR CONTAINER IS OUR LI THING*/ 
   .feature-label{ 
-    display: flex;
     align-items: center;
-    
     & i{
       color: green; /* Color for checkmark icon */
       margin-right: 5px;
@@ -641,7 +642,7 @@ p{
 .blog {
   width: 33%;
   padding: var(--sectionPad);
-  
+  flex-wrap: wrap;
 }
 
 .blog-header{
@@ -699,10 +700,10 @@ p{
 }
 
 
-/*! BLOG DONE */
+/*! ===============================BLOG DONE=============================== */
 
 
-/*! FOOTER */
+/*! ===============================FOOTER=============================== */
 #footer{
   background-color: #2c2c2c; /*! COLOR FOUND USING CHAT GPT*/
   
@@ -753,42 +754,160 @@ p{
 
 
 
+/*! ===============================MEDIA QUERIES=============================== */
 
-/*  
-#team{
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 40rem;
-  background: red;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem;
-  gap: 3rem;
-}
-.sub-title{
-  text-align: center;
-}
-.team-pic{
-  padding: 2rem;
-  height: 250px;
+@media (max-width: 600px) {
+  
+  .first-nav {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+      &.first-nav h2 {
+      font-size: 1rem;
+      font-weight: 700;
+        color: var(--color);
+      }
+      
+      &.first-nav ul {
+        list-style: none;
+        font-size: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+      }
+  
+      &.first-nav ul li a {
+        color: var(--color);
+        text-decoration: none;
+      }
+  }
 
-}
-.team-pic img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 50%;
-  filter: grayscale(1);
-  transition: 0.7s;
 
-}
+  #search{
+    .searchbar{
+      padding: 1rem 0.5rem;
+      width: 40%;
 
-.team-pic img:hover{
-  filter: grayscale(0);
-  transition: 0.7;
-}
+      & form {
+        padding: 0.3rem;
+        border-radius: 2rem;
+        background-color: white;
+        display: flex;
+        width: max-content;
+        align-items: center;
+        
+        & input{
+          font-size: 0.5rem;
+          padding-left: 1rem;
+          padding-right: 0.5rem;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+    
+        & button{
+          cursor: pointer;
+          padding: 10px;
+          font-size: 0.5rem;
+          color:var(--color);
+          text-transform: uppercase;
+          background-color:cornflowerblue;
+          outline: none;
+          border: none;
+          border-radius: 2rem;
+          text-align: center;
+          box-shadow: 0 3px #999;
+        }
+      }
+    }
+    
+    & h1{
+      font-size: 1rem;
+      padding: 0;
+    }
 
-.name-team{
-  text-align: center;
-} */
+    & p{ 
+      font-size: 0.5rem;
+      opacity: var(--opacity);
+      line-height: 1.2;
+      word-spacing: 0.1rem;
+      text-align: left;
+      padding-bottom: 22px;
+    }
+   }
+
+  .logo {
+    width: 80%;
+    margin-left: 75px ;
+
+      & img{
+        height: 200px;
+      }
+    }
+
+
+    /*! ===============================NAV DOVE===============================*/
+
+    /*! ===============================CARDS===============================*/
+
+    #cards {
+      
+      & h2{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
+    .container{
+        padding: 10px;
+      }
+    
+    .card{
+      padding: 0 20px 20px 20px;
+    }
+
+    .card-header{
+        padding: 0;
+      }
+     i{
+        font-size: 50px;
+        padding: 0;
+      }
+    }
+
+    #team{
+      & h2{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
+    }
+
+    #parallax{
+      & h2{
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      & p{
+        padding: 0.1rem;
+      font-size: 0.5rem;
+      }
+      & button{
+        margin: 20px 0 0 0 ;
+        font-size: 0.5rem;
+      }
+
+
+    }
+  }

@@ -1000,24 +1000,3 @@ p{
     }
   }
 
-  /* @media (max-width: 768px ) {
-
-    .first-nav {
-      padding: 1rem;
-  
-      
-        &.first-nav h2 {
-        font-size: 1rem;
-        }
-        
-        &.first-nav ul {
-          font-size: 0.5rem;
-          gap: 0.5rem;
-        }
-    
-        &.first-nav ul li a {
-          color: var(--color);
-          text-decoration: none;
-        }
-    } */
-  }

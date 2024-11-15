@@ -4,15 +4,77 @@
     margin: 0;
 }
 
-#wrapper{
-    
-    & h1{
-        text-align: center;
+
+#wrapper {
+width: 100%;
+background-color: #ffffff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    & h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
     }
 }
 
+#btn {
+display: block;
+width: 80%;
+padding: 0.5rem ;
+margin: 15px  auto;
+font-size: 1.5rem;
+background-color: #5c6bc0;
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
 
-.delBtn i{
-    display: inline-block;
-    width: 50px;  
+
+#count{
+    width: 10%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #5c6bc091;
+}
+#deleteAll{
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c6bc091;
+}
+
+#todoCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+    & .todoCard{
+        position: relative;
+        flex: 1 1 15%;
+        text-align: center;
+    }
+
+
+}
+
+
+.delBtn i{ 
+    position: absolute;
+    color: #e57373;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px;
+    transition: color 0.3s ease;
+
 }

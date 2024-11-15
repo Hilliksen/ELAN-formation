@@ -14,12 +14,19 @@
     margin: 5px;
     animation: appear 1s; /*? what is this */
     border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.8, transform 0.8s;
 }
 
 .box-valid{
     background-color: #ccc;
     color: #aaa;
+    transform: scale(0.8);
 }
+
+.box.error{ color: red; background-color: rgb(255, 121, 121);}
+.box.success{ color: green; background-color: rgb(10, 168, 10);}
+.box.notice{ color: blue; background-color: rgb(60, 60, 255);}
 
 @keyframes appear {
         from{

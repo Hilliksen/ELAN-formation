@@ -10,6 +10,18 @@ addBtn.addEventListener('click', addTask);
 const taskCard = document.querySelector(".todoCard"); //# check EXP  
 const taskContainer = document.querySelector("#todoCards"); //# check EXP
 
+
+function updateCount(){
+    const count = document.querySelectorAll('.todoCard').length
+    document.getElementById('count').textContent = `Tasks :  ${count}`;
+}
+
+function deleteAll(){
+    const tasks = document.querySelectorAll('.todoCard')
+    tasks.forEach(task => task.remove());
+    updateCount()
+}
+document.getElementById('deleteAll').addEventListener('click', deleteAll);
 function addTask (){
     const newTask = taskCard.cloneNode(true) //! clones the task card
     const newDelBtn = newTask.querySelector('.delBtn') //# check EXP
@@ -21,6 +33,7 @@ function addTask (){
     });
 
     taskContainer.appendChild(newTask) //! append new task to the tasks container
+    updateCount();
 }
 
 //! =======================DELETE BUTTON========================
@@ -33,7 +46,8 @@ delBtn.addEventListener('click', function(){    //# addEvent = add to a button w
 function deleteTask(task) {
 
     task.remove(); //# .remove is a methode to do what it says so basically removes node or element 
-    
+    updateCount();
 }
 
+updateCount(); //# shows the count in case there are already task
  //# EXPLANATION ode = element from html but also attributes or text, but to be safe and secure just target the 

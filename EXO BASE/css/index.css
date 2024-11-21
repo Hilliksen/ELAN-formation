@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.carrier{
+    width: 200px;
+    height: 200px;
+    background-color: #BE9716;
+    font-size: 20px;
+    font: "Times New Roman";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

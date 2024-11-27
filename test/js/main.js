@@ -1,7 +1,7 @@
 
 function shuffleChildren(parent){
     let children = parent.children
-    let i = children.length, k , temp
+    let i = children.length, k , temp //# TEMPORARY VARS
     while (--i > 0) {
        k = Math.floor(Math.random() * (i+1))
        temp = children[k]
@@ -11,10 +11,10 @@ function shuffleChildren(parent){
 }
 function showReaction(type, clickedBox){
     clickedBox.classList.add(type)
-    if(type !== "success"){
-        setTimeout(function(){
+    if(type !== "success"){ //# this means that if type is NOT equal to success the game will reset
+        setTimeout(function(){ //# this is a java script funtion that says timeout meaning a delay or a counter that after 800 milliseconds will do something, in this case remove type those remove the css we applied to it when clicked 
             clickedBox.classList.remove(type)
-        }, 800)
+        }, 800) //# 800 measuring unit in 0,8s
     }
 }
 

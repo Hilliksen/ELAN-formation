@@ -14,14 +14,28 @@ cont.appendChild(box2)
 cont.appendChild(box3)
 cont.appendChild(box4)
 
-let boxes = [box, box2, box3, box4];
+const boxes = [box, box2, box3, box4];
 
-boxes.forEach(getAdd);
+const newBox = document.querySelector('.box2');
+const colorText = document.querySelector('.color');
 
-function getAdd() {
-    box.addEventListener('click', ()=>{
-        window.getComputedStyle
+boxes.forEach(box=>{
+    box.addEventListener('click', function(){
+        const color = window.getComputedStyle(box).backgroundColor
+        
+        newBox.style.backgroundColor = color;
+
+        colorText.style.backgroundColor = color;
     })
-}
+})
 
-console.log(getAdd)
+ 
+boxes.forEach(box => {
+    box.addEventListener("click", () => {
+      const color = window.getComputedStyle(box).backgroundColor;
+ 
+      newBox.style.backgroundColor = color;
+ 
+      colorText.textContent = color;
+    });
+  });

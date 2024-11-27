@@ -35,9 +35,15 @@
 }
 
 
+ 
 .box2{
     height: 250px;
     width: 250px;
     margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
     background-color: black;
 }

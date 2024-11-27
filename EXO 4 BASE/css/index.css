@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    min-height: 100vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    & p{
+        font-size: x-large;
+        color: white;
+        margin: 15px auto;
+
+    }
+
+    & .box{
+        height: 150px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;  
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        & i{
+            font-size: 50px;
+            color: white;
+        }
+    }
+
+    & .toggledBox{
+        height: 160px;
+        width: 160px;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 2px black;
+        & i{
+            font-size: 50px;
+            color: white;
+        }
+
+        & name{
+            font-size: 15px;
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+        }
+    }
+
+}
